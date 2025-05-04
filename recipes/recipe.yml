@@ -24,6 +24,8 @@ modules:
       - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
     optfix:
       - Bitwarden
+      - sublime_text
+      - sublime_merge
       # Do I need anything else here?
     install:
       - gnome-tweaks
@@ -53,6 +55,7 @@ modules:
         - it.mijorus.gearlever
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
+        - org.kde.dolphin
         # - com.wps.Office
       remove:
         - page.tesk.Refine

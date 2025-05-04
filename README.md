@@ -15,7 +15,8 @@ Using `bluefin-dx:stable`, customized for personal use.
 - [x] Alacritty (RPM)
 - [x] Sublime Text (RPM)
 - [x] Sublime Merge (RPM)
-- [x] Dolphin (RPM)
+- [x] Dolphin (flatpak)
+  - RPM would be better, but would pull a *lot* of KDE dependencies...
 - [x] LibreOffice (flatpak)
 - [x] GearLever (flatpak)
 - [x] Betterbird instead of Thunderbird (flatpak)
@@ -33,6 +34,7 @@ Using `bluefin-dx:stable`, customized for personal use.
 - [ ] Seafile, Zotero? Annoying to keep them as binaries.
 - [ ] Implement chezmoi module: clean up and publish dotfiles repo
 - [ ] Copy some /etc configs?
+- [ ] Make build tag actually say `stable` instead of `latest`
 
 ## Current issues
 

@@ -79,7 +79,7 @@ modules:
       remove:
         - io.github.input_leap.input-leap
         - org.mozilla.Thunderbird
-        - org.mozilla.Firefox
+        # - org.mozilla.Firefox # ??
         - org.gnome.DejaDup
         # - Also remove Gnome-tweaks flatpak if present?
     user: {}

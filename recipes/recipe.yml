@@ -20,9 +20,9 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
   
-  - type: script # Add repo files and such
-    snippets:
-      - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
+  # - type: script # Add repo files and such
+  #   snippets:
+  #     - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
 
   - type: dnf
     repos:
@@ -31,7 +31,7 @@ modules:
         - ublue-os/packages
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-        - /tmp/sourcegit.repo # Trying with update
+        - sourcegit.repo # Try to find a way to download it at build?
       keys:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     optfix:

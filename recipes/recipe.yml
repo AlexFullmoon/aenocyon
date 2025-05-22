@@ -21,6 +21,9 @@ modules:
     keys:
       - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     repos:
+      # when including COPR repos, use the %OS_VERSION% magic string, e.g.
+      # - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo 
+      - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
     optfix:
       - Bitwarden
@@ -28,15 +31,20 @@ modules:
       - sublime_merge
       # Do I need anything else here?
     install:
-      - gnome-tweaks
       - solaar
-      # solaar-udev # We're adding rules file directly
+      # - solaar-udev # We're adding rules file directly
       - alacritty
       - sublime-text
       - sublime-merge
       - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+      - ghostty
+      - zed
+      - firefox
+      - firefox-langpacks
+      - dolphin # Let's try a taste of madness
     remove:
-      - input-remapper # Conflicts with Solaar
+      - input-remapper  # Conflicts with Solaar
+      - code            # Not using it
 
   - type: script 
     snippets:
@@ -52,15 +60,16 @@ modules:
         - com.discordapp.Discord
         - com.valvesoftware.Steam
         - org.libreoffice.LibreOffice
+        - com.wps.Office
         - it.mijorus.gearlever
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
-        - org.kde.dolphin
-        # - com.wps.Office
+        # - dev.zed.Zed # Maybe flatpack would do?
+        # - org.kde.dolphin # Let's try a taste of madness
       remove:
-        - page.tesk.Refine
         - io.github.input_leap.input-leap
         - org.mozilla.Thunderbird
+       # - org.mozilla.Firefox # To remove later
         - org.gnome.DejaDup
         # - Also remove Gnome-tweaks flatpak if present?
     user: {} # Also add Flathub user repo, but no user packages
@@ -74,16 +83,21 @@ modules:
       - 4798 # Thinkpad battery thresholds
       - 986  # Thinkpad thermals
       # - 5090 # Space bar
+      # - 1040 # Random wallpaper
       # - 4736 # Smart Auto Move
     # uninstall:
       # - GSConnect
 
     # Further examples
 
-    # - type: systemd
-    #   system:
-    #     enabled:
-    #       - exampleservice
+    - type: systemd
+      system:
+        masked:
+          # This is due to log-standing Gnome bug with autodetecting network printers
+          # I use only manually added printers and don't need a hundred of others 
+          # Manually unmask and enable to add a printer that requires it
+          avahi-daemon.service  
+          avahi-daemon.socket
 
     # - type: chezmoi
     #   repository: "https://git.moonlightwell.ru/fullmoon/dotfiles" # my dotfiles repo

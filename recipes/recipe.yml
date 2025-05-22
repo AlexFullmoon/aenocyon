@@ -19,14 +19,14 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-        
+
   - type: dnf
     repos:
       copr:
         - ublue-os/staging
         - ublue-os/packages
       files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      #  - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - https://codeberg.org/api/packages/yataro/rpm.repo # may require nogpg
       keys:
@@ -38,15 +38,14 @@ modules:
       # Do I need anything else here?
     install:
       packages:
-        - terra-release # How about this way?
         - solaar
         # - solaar-udev # We're adding rules file directly
         - alacritty
         - sublime-text
         - sublime-merge
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        - ghostty
-        - zed
+      #  - ghostty
+      #  - zed
         - firefox
         - firefox-langpacks
         - dolphin # Let's try a taste of madness

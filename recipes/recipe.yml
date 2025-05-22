@@ -47,8 +47,6 @@ modules:
         - sublime-text
         - sublime-merge
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        # - ghostty
-        # - zed
         - firefox
         - firefox-langpacks
         - dolphin # Let's try a taste of madness
@@ -71,9 +69,7 @@ modules:
   #     - sublime_text
   #     - sublime_merge
   #     # Do I need anything else here?
-    install:
-      - ghostty
-      - zed
+  #  install:
   #     - solaar
   #     # - solaar-udev # We're adding rules file directly
   #     - alacritty
@@ -107,7 +103,7 @@ modules:
         - it.mijorus.gearlever
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
-        # - dev.zed.Zed # Maybe flatpack would do?
+        - dev.zed.Zed # RPM install not possible due to filename conflict with zfs (!) 
         # - org.kde.dolphin # Let's try a taste of madness
       remove:
         - io.github.input_leap.input-leap

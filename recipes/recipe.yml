@@ -23,7 +23,6 @@ modules:
   - type: script # Add repo files and such
     snippets:
       - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
-      - "dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release"
 
   - type: dnf
     repos:
@@ -31,9 +30,8 @@ modules:
         - ublue-os/staging
         - ublue-os/packages
       files:
-      #  - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-        - /tmp/sourcegit.repo # Provide a way to update it
+        - /tmp/sourcegit.repo # Trying with update
       keys:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     optfix:
@@ -49,8 +47,8 @@ modules:
         - sublime-text
         - sublime-merge
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        - ghostty
-      #  - zed
+        - ghostty # via rpm-ostree?
+        - zed
         - firefox
         - firefox-langpacks
         - dolphin # Let's try a taste of madness

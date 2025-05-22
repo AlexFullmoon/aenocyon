@@ -28,6 +28,7 @@ modules:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+        - https://codeberg.org/api/packages/yataro/rpm.repo # may require nogpg
       keys:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     optfix:
@@ -37,6 +38,7 @@ modules:
       # Do I need anything else here?
     install:
       packages:
+        - terra-release # How about this way?
         - solaar
         # - solaar-udev # We're adding rules file directly
         - alacritty
@@ -48,6 +50,7 @@ modules:
         - firefox
         - firefox-langpacks
         - dolphin # Let's try a taste of madness
+        - sourcegit
     remove:
       packages:
         - input-remapper  # Conflicts with Solaar

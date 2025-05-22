@@ -18,10 +18,11 @@ modules:
   - type: files
     files:
       - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+        destination: / 
   
-  # - type: script # Add repo files and such
+  # - type: script
   #   snippets:
+  # Add repo file at build time. Where to download?
   #     - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
 
   - type: dnf
@@ -31,22 +32,22 @@ modules:
         - ublue-os/packages
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-        - sourcegit.repo # Try to find a way to download it at build?
+        - sourcegit.repo # (TODO) Try to find a way to download it at build
       keys:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     optfix:
       - Bitwarden
       - sublime_text
-      - sublime_merge  
-      # Do I need anything else here?
+      - sublime_merge
     install:
       packages:
         - solaar
-        # - solaar-udev # We're adding rules file directly
+        # - solaar-udev # Adding rules file directly instead
         - alacritty
         - sublime-text
         - sublime-merge
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+        # Testing area
         - firefox
         - firefox-langpacks
         - dolphin # Let's try a taste of madness
@@ -56,35 +57,6 @@ modules:
         - input-remapper  # Conflicts with Solaar
         - code            # Not using it
 
-  - type: rpm-ostree
-  #   keys:
-  #     - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
-  #   repos:
-  #     # when including COPR repos, use the %OS_VERSION% magic string, e.g.
-  #     # - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo 
-  #     - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-  #     - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-  #   optfix:
-  #     - Bitwarden
-  #     - sublime_text
-  #     - sublime_merge
-  #     # Do I need anything else here?
-  #  install:
-  #     - solaar
-  #     # - solaar-udev # We're adding rules file directly
-  #     - alacritty
-  #     - sublime-text
-  #     - sublime-merge
-  #     - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-  #     - ghostty
-  #     - zed
-  #     - firefox
-  #     - firefox-langpacks
-  #     - dolphin # Let's try a taste of madness
-  #   remove:
-  #     - input-remapper  # Conflicts with Solaar
-  #     - code            # Not using it
-
   - type: script 
     snippets:
       # Additional Bitwarden stuff to do
@@ -92,9 +64,8 @@ modules:
       # - "chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy"
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
+    notify: true
     system:
-      # If no repo information is specified, Flathub will be used by default
       install:
         - com.discordapp.Discord
         - com.valvesoftware.Steam
@@ -108,10 +79,10 @@ modules:
       remove:
         - io.github.input_leap.input-leap
         - org.mozilla.Thunderbird
-       # - org.mozilla.Firefox # To remove later
+       # - org.mozilla.Firefox # (TODO) Remove later
         - org.gnome.DejaDup
         # - Also remove Gnome-tweaks flatpak if present?
-    user: {} # Also add Flathub user repo, but no user packages
+    user: {}
 
   - type: gnome-extensions
     install:
@@ -127,8 +98,6 @@ modules:
     # uninstall:
       # - GSConnect
 
-    # Further examples
-
   - type: systemd
     system:
       masked:
@@ -140,9 +109,8 @@ modules:
 
     # - type: chezmoi
     #   repository: "https://git.moonlightwell.ru/fullmoon/dotfiles" # my dotfiles repo
-    #   # TODO: clean repo from secrets, make public
+    #   # (TODO) Clean repo from secrets, make public
     #   all-users: false # make users have to enable chezmoi manually
     #   file-conflict-policy: replace # override changed files with those from the repo
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
+  - type: signing

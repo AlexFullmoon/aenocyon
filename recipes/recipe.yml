@@ -47,8 +47,8 @@ modules:
         - sublime-text
         - sublime-merge
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        - ghostty
-        - zed
+        # - ghostty
+        # - zed
         - firefox
         - firefox-langpacks
         - dolphin # Let's try a taste of madness

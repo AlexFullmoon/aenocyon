@@ -19,6 +19,16 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  
+  #- type: script # Add repo files updates
+
+  - type: dnf
+    repos:
+     files:
+       - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    install:
+      packages:
+        - terra-release
 
   - type: dnf
     repos:
@@ -28,7 +38,7 @@ modules:
       files:
       #  - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-        - https://codeberg.org/api/packages/yataro/rpm.repo # may require nogpg
+        - sourcegit.repo # Provide a way to update it
       keys:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     optfix:
@@ -44,7 +54,7 @@ modules:
         - sublime-text
         - sublime-merge
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-      #  - ghostty
+        - ghostty
       #  - zed
         - firefox
         - firefox-langpacks

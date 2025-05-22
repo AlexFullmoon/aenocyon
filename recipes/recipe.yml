@@ -36,20 +36,22 @@ modules:
       - sublime_merge  
       # Do I need anything else here?
     install:
-      - solaar
-      # - solaar-udev # We're adding rules file directly
-      - alacritty
-      - sublime-text
-      - sublime-merge
-      - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-      - ghostty
-      - zed
-      - firefox
-      - firefox-langpacks
-      - dolphin # Let's try a taste of madness
+      packages:
+        - solaar
+        # - solaar-udev # We're adding rules file directly
+        - alacritty
+        - sublime-text
+        - sublime-merge
+        - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+        - ghostty
+        - zed
+        - firefox
+        - firefox-langpacks
+        - dolphin # Let's try a taste of madness
     remove:
-      - input-remapper  # Conflicts with Solaar
-      - code            # Not using it
+      packages:
+        - input-remapper  # Conflicts with Solaar
+        - code            # Not using it
 
   # - type: rpm-ostree
   #   keys:
@@ -130,8 +132,8 @@ modules:
         # This is due to log-standing Gnome bug with autodetecting network printers
         # I use only manually added printers and don't need a hundred of others 
         # Manually unmask and enable to add a printer that requires it
-        avahi-daemon.service  
-        avahi-daemon.socket
+        - avahi-daemon.service  
+        - avahi-daemon.socket
 
     # - type: chezmoi
     #   repository: "https://git.moonlightwell.ru/fullmoon/dotfiles" # my dotfiles repo

@@ -39,6 +39,7 @@ modules:
       - Bitwarden
       - sublime_text
       - sublime_merge
+      - sourcegit
     install:
       packages:
         - solaar
@@ -47,15 +48,15 @@ modules:
         - sublime-text
         - sublime-merge
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        # Testing area
         - firefox
         - firefox-langpacks
-        - dolphin # Let's try a taste of madness
+        - dolphin
         - sourcegit
     remove:
       packages:
         - input-remapper  # Conflicts with Solaar
         - code            # Not using it
+        - gnome-tweaks    # Now I need to remove it, apparently
 
   - type: script 
     snippets:
@@ -75,11 +76,10 @@ modules:
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
         - dev.zed.Zed # RPM install not possible due to filename conflict with zfs (!) 
-        # - org.kde.dolphin # Let's try a taste of madness
       remove:
         - io.github.input_leap.input-leap
         - org.mozilla.Thunderbird
-       # - org.mozilla.Firefox # (TODO) Remove later
+        - org.mozilla.Firefox
         - org.gnome.DejaDup
         # - Also remove Gnome-tweaks flatpak if present?
     user: {}

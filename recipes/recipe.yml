@@ -4,6 +4,9 @@
 name: shapeshifter
 # description will be included in the image's metadata
 description: This is my personal OS image.
+alt-tags:
+  - stable
+  - stable-weekly
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin-dx
@@ -16,19 +19,21 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
-  - type: rpm-ostree
-    keys:
-      - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+        
+  - type: dnf
     repos:
-      # when including COPR repos, use the %OS_VERSION% magic string, e.g.
-      # - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo 
-      - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-      - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+      copr:
+        - ublue-os/staging
+        - ublue-os/packages
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+        - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+      keys:
+        - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     optfix:
       - Bitwarden
       - sublime_text
-      - sublime_merge
+      - sublime_merge  
       # Do I need anything else here?
     install:
       - solaar
@@ -45,6 +50,35 @@ modules:
     remove:
       - input-remapper  # Conflicts with Solaar
       - code            # Not using it
+
+  # - type: rpm-ostree
+  #   keys:
+  #     - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+  #   repos:
+  #     # when including COPR repos, use the %OS_VERSION% magic string, e.g.
+  #     # - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo 
+  #     - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+  #     - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+  #   optfix:
+  #     - Bitwarden
+  #     - sublime_text
+  #     - sublime_merge
+  #     # Do I need anything else here?
+  #   install:
+  #     - solaar
+  #     # - solaar-udev # We're adding rules file directly
+  #     - alacritty
+  #     - sublime-text
+  #     - sublime-merge
+  #     - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+  #     - ghostty
+  #     - zed
+  #     - firefox
+  #     - firefox-langpacks
+  #     - dolphin # Let's try a taste of madness
+  #   remove:
+  #     - input-remapper  # Conflicts with Solaar
+  #     - code            # Not using it
 
   - type: script 
     snippets:

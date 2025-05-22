@@ -47,7 +47,7 @@ modules:
         - sublime-text
         - sublime-merge
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        - ghostty # via rpm-ostree?
+        - ghostty
         - zed
         - firefox
         - firefox-langpacks
@@ -58,7 +58,7 @@ modules:
         - input-remapper  # Conflicts with Solaar
         - code            # Not using it
 
-  # - type: rpm-ostree
+  - type: rpm-ostree
   #   keys:
   #     - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
   #   repos:
@@ -71,7 +71,9 @@ modules:
   #     - sublime_text
   #     - sublime_merge
   #     # Do I need anything else here?
-  #   install:
+    install:
+      - ghostty
+      - zed
   #     - solaar
   #     # - solaar-udev # We're adding rules file directly
   #     - alacritty

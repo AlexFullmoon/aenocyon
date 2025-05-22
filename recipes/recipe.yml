@@ -20,15 +20,10 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
   
-  #- type: script # Add repo files updates
-
-  - type: dnf
-    repos:
-     files:
-       - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-    install:
-      packages:
-        - terra-release
+  - type: script # Add repo files and such
+    snippets:
+      - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
+      - "dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release"
 
   - type: dnf
     repos:
@@ -38,7 +33,7 @@ modules:
       files:
       #  - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-        - sourcegit.repo # Provide a way to update it
+        - /tmp/sourcegit.repo # Provide a way to update it
       keys:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     optfix:

@@ -24,7 +24,7 @@ modules:
       copr:
         - ublue-os/staging
         - ublue-os/packages
-        - pgdev/ghostty
+        # - pgdev/ghostty
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - sourcegit.repo # (TODO) Try to find a way to download it at build
@@ -41,7 +41,7 @@ modules:
         # - solaar-udev # Adding rules file directly instead
         - alacritty
         - sublime-text
-        - ghostty
+        # - ghostty # See https://github.com/ghostty-org/ghostty/issues/2542
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - firefox
         - firefox-langpacks

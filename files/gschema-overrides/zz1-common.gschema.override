@@ -1,0 +1,19 @@
+[org/gnome/desktop/peripherals/mouse]
+natural-scroll=true
+
+[org/gnome/desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/wm/preferences]
+action-double-click-titlebar='toggle-maximize'
+action-middle-click-titlebar='none'
+action-right-click-titlebar='menu'
+button-layout=':minimize,close'
+focus-mode='click'
+
+[org/gnome/desktop/interface]
+accent-color='slate'
+
+[org/gnome/shell/weather]
+automatic-location=true
+locations=[<(uint32 2, <("Simferopol'", 'UKFF', true, [(0.78630960923942472, 0.59298046538039406)], [(0.78452549877145117, 0.59515727493006643)])>)>]

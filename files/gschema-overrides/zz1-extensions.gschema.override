@@ -1,0 +1,37 @@
+[org/gnome/shell/extensions/thinkpad-battery-threshold]
+color-mode=false
+end-bat0=85
+indicator-mode='NEVER'
+start-bat0=80
+
+[org/gnome/shell/extensions/search-light]
+animation-speed=100.0
+background-color=(0.0, 0.0, 0.0, 0.56999999284744263)
+blur-background=false
+blur-brightness=0.59999999999999998
+blur-sigma=30.0
+border-color=(0.23000000417232513, 0.23000000417232513, 0.23000000417232513, 0.61000001430511475)
+border-radius=1.9389671361502347
+border-thickness=1
+entry-font-size=1
+monitor-count=1
+preferred-monitor=0
+scale-height=0.14999999999999999
+scale-width=0.10000000000000001
+shortcut-search=['<Alt>space']
+use-animations=false
+window-effect=0
+
+[org/gnome/shell/extensions/just-perfection]
+accent-color-icon=false
+accessibility-menu=false
+animation=5
+controls-manager-spacing-size=0
+dash-icon-size=0
+panel-size=0
+quick-settings-airplane-mode=false
+quick-settings-night-light=false
+startup-status=0
+support-notifier-showed-version=34
+support-notifier-type=0
+world-clock=false

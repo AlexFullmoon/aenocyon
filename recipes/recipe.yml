@@ -47,6 +47,12 @@ modules:
         - firefox-langpacks
         - dolphin
         - sourcegit
+        # Dependencies for winapps
+        - dialog
+        - freerdp
+        - iproute
+        - libnotify
+        - nmap-ncat
     remove:
       packages:
         - input-remapper # Conflicts with Solaar
@@ -66,11 +72,9 @@ modules:
         - com.discordapp.Discord
         - com.valvesoftware.Steam
         - org.libreoffice.LibreOffice
-        - com.wps.Office
         - it.mijorus.gearlever
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
-        - dev.zed.Zed # RPM install not possible due to filename conflict with zfs (!)
       remove:
         - io.github.input_leap.input-leap
         - org.mozilla.Thunderbird

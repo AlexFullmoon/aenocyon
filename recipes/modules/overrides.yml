@@ -1,0 +1,12 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+# System overrides
+modules:
+  - type: systemd
+    system:
+      masked:
+        # This is due to log-standing Gnome bug with autodetecting network printers
+        # I use only manually added printers and don't need a hundred of others
+        # Manually unmask and enable to add a printer that requires it
+        - avahi-daemon.service
+        - avahi-daemon.socket

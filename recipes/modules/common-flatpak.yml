@@ -1,0 +1,20 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+# Flatpak apps selection
+modules:
+  - type: default-flatpaks
+    notify: true
+    system:
+      install:
+        - com.discordapp.Discord
+        - com.valvesoftware.Steam
+        - org.libreoffice.LibreOffice
+        - it.mijorus.gearlever
+        - eu.betterbird.Betterbird
+        - md.obsidian.Obsidian
+      remove:
+        - io.github.input_leap.input-leap
+        - org.mozilla.Thunderbird
+        # - org.mozilla.Firefox # Not present?
+        - org.gnome.DejaDup
+    user: {}

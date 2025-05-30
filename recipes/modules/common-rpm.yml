@@ -1,0 +1,50 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+# (Mostly) established apps selection
+modules:
+
+  # - type: script
+  #   snippets:
+        # Add repo files at build time. 
+        # (TODO) Find a way to download them at build time
+  #     - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
+
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/staging
+        - ublue-os/packages
+        # - pgdev/ghostty # currently disabled due to ghostty bug https://github.com/ghostty-org/ghostty/issues/2542
+      files:
+        - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+        - sourcegit.repo
+      keys:
+        - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+    install:
+      packages:
+        - solaar
+        # - solaar-udev # Adding rules file directly instead
+        - alacritty
+        - sublime-text
+        # - ghostty 
+        - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+        - firefox
+        - firefox-langpacks
+        - dolphin
+        - sourcegit
+    remove:
+      packages:
+        - input-remapper  # Conflicts with Solaar
+        - code            # Not using it
+        - gnome-tweaks    # Now I need to remove it, apparently
+    optfix:
+      - Bitwarden
+      - sublime_text
+      - sublime_merge
+      - sourcegit
+
+  - type: script
+    snippets:
+      # Additional Bitwarden stuff to do
+      - "ln -sf /usr/lib/opt/Bitwarden/bitwarden /etc/alternatives/bitwarden"
+      # - "chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy"

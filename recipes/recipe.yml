@@ -8,113 +8,21 @@ alt-tags:
 base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: stable
 
+# Executed in order
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: /
+  - from-file: modules/init.yml
+  - from-file: modules/common-rpm.yml
+  - from-file: modules/common-flatpak.yml
+  - from-file: modules/gnome.yml
+  # - from-file: modules/chezmoi.yml
+  - from-file: modules/overrides.yml
+  # - from-file: modules/crossover.yml
 
-  # - type: script
-  #   snippets:
-  # Add repo file at build time. Where to download?
-  #     - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
 
-  - type: dnf
-    repos:
-      copr:
-        - ublue-os/staging
-        - ublue-os/packages
-        # - pgdev/ghostty
-      files:
-        - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-        - sourcegit.repo # (TODO) Try to find a way to download it at build
-      keys:
-        - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
-    optfix:
-      - Bitwarden
-      - sublime_text
-      - sublime_merge
-      - sourcegit
-    install:
-      packages:
-        - solaar
-        # - solaar-udev # Adding rules file directly instead
-        - alacritty
-        - sublime-text
-        # - ghostty # See https://github.com/ghostty-org/ghostty/issues/2542
-        - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        - firefox
-        - firefox-langpacks
-        - dolphin
-        - sourcegit
-        # Dependencies for winapps
-        - dialog
-        - freerdp
-        - iproute
-        - libnotify
-        - nmap-ncat
-    remove:
-      packages:
-        - input-remapper # Conflicts with Solaar
-        - code # Not using it
-        - gnome-tweaks # Now I need to remove it, apparently
 
-  - type: script
-    snippets:
-      # Additional Bitwarden stuff to do
-      - "ln -sf /usr/lib/opt/Bitwarden/bitwarden /etc/alternatives/bitwarden"
-      # - "chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy"
 
-  - type: default-flatpaks
-    notify: true
-    system:
-      install:
-        - com.discordapp.Discord
-        - com.valvesoftware.Steam
-        - org.libreoffice.LibreOffice
-        - it.mijorus.gearlever
-        - eu.betterbird.Betterbird
-        - md.obsidian.Obsidian
-      remove:
-        - io.github.input_leap.input-leap
-        - org.mozilla.Thunderbird
-        # - org.mozilla.Firefox # Not present?
-        - org.gnome.DejaDup
-        # - Also remove Gnome-tweaks flatpak if present?
-    user: {}
 
-  - type: gnome-extensions
-    install:
-      - 779 # Clipboard Indicator
-      - 3843 # Just Perfection
-      - 6162 # Solaar addon
-      - 7180 # Syncthing toggle
-      - 4798 # Thinkpad battery thresholds
-      - 986 # Thinkpad thermals
-      # - 1040 # Random wallpaper
-      # - 4736 # Smart Auto Move
-    # uninstall:
-    # - GSConnect
 
-  - type: gschema-overrides
-    include:
-      - zz1-xkb-config.gschema.override
-      - zz1-common.gschema.override
-      - zz1-extensions.gschema.override
 
-  - type: systemd
-    system:
-      masked:
-        # This is due to log-standing Gnome bug with autodetecting network printers
-        # I use only manually added printers and don't need a hundred of others
-        # Manually unmask and enable to add a printer that requires it
-        - avahi-daemon.service
-        - avahi-daemon.socket
 
-    # - type: chezmoi
-    #   repository: "https://git.moonlightwell.ru/fullmoon/dotfiles" # my dotfiles repo
-    #   # (TODO) Clean repo from secrets, make public
-    #   all-users: false # make users have to enable chezmoi manually
-    #   file-conflict-policy: replace # override changed files with those from the repo
 
-  - type: signing

@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 # Crossover for MS Office. License at build time? Maybe when I move to local builds.
 modules:
-- type: dnf
+  - type: dnf
     install:
       packages:
         # Direct link. No idea if it would hold, but don't want to put it in repo, obviously

@@ -1,39 +1,39 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
-# Crossover for MS Office. License at build time? Maybe when I move to local builds.
+# Crossover for MS Office.
 modules:
   - type: dnf
     install:
       packages:
         # Direct link. No idea if it would hold, but don't want to put it in repo, obviously
-        - https://media-zh.codeweavers.com/pub/crossover/cxlinux/demo/crossover-25.0.0-1.rpm
-        # Prerequisites for Crossover itself
+        #- https://media-zh.codeweavers.com/pub/crossover/cxlinux/demo/crossover-25.0.0-1.rpm
+        # Downloading from local server
+        - https://public.moonlightwell.ru/build/cx/crossover-25.0.0-1.rpm
+        # Prerequisites for Crossover itself (some are already present)
         - gtk3
         - perl-File-Copy
         - python3-gobject
         - vte291
         # Prerequisites for bottles
         - fontconfig.i686
-        - fontconfig.x86_64
         - gstreamer1-plugins-bad-free.i686
-        - gstreamer1-plugins-bad-free.x86_64
         - gstreamer1-plugins-base.i686
-        - gstreamer1-plugins-base.x86_64
         - gstreamer1-plugins-good.i686
-        - gstreamer1-plugins-good.x86_64
         - gstreamer1.i686
-        - gstreamer1.x86_64
         - libXcomposite.i686
-        - libXcomposite.x86_64
         - libXinerama.i686
-        - libXinerama.x86_64
         - nss-mdns.i686
-        - nss-mdns.x86_64
         - pcsc-lite-libs.i686
-        - pcsc-lite-libs.x86_64
         - sane-backends-libs.i686
-        - sane-backends-libs.x86_64
         - vulkan-loader.i686
-        - vulkan-loader.x86_64
     optfix:
       - cxoffice
+
+  - type: script
+    snippets:
+      # Installing additional files
+      - "curl -sL https://public.moonlightwell.ru/build/cx/tie | base64 -d > /opt/cxoffice/share/crossover/data/tie.pub"
+      - "curl -sL https://public.moonlightwell.ru/build/cx/lis | base64 -d > /opt/cxoffice/etc/license.sha256"
+      - "curl -sL https://public.moonlightwell.ru/build/cx/lit | base64 -d > /opt/cxoffice/etc/license.txt"
+
+# Total result: ~200 packages, ~1Gb extra space 

@@ -26,12 +26,12 @@ modules:
         # - solaar-udev # Adding rules file directly instead
         - alacritty
         - sublime-text
+        - sourcegit
         # - ghostty 
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - firefox
         - firefox-langpacks
         - dolphin
-        - sourcegit
     remove:
       packages:
         - input-remapper

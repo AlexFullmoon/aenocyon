@@ -3,10 +3,10 @@
 # (Mostly) established apps selection
 modules:
 
+  # Add repo files at build time. 
+  # (TODO) Where to download them? Filesystem appears to be readonly?
   # - type: script
   #   snippets:
-        # Add repo files at build time. 
-        # (TODO) Find a way to download them at build time
   #     - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
 
   - type: dnf
@@ -34,9 +34,9 @@ modules:
         - sourcegit
     remove:
       packages:
-        - input-remapper  # Conflicts with Solaar
-        - code            # Not using it
-        - gnome-tweaks    # Now I need to remove it, apparently
+        - input-remapper
+        - code
+        - gnome-tweaks
     optfix:
       - Bitwarden
       - sublime_text

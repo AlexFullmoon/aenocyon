@@ -12,9 +12,10 @@ modules:
         - it.mijorus.gearlever
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
+        - org.zotero.Zotero
       remove:
         - io.github.input_leap.input-leap
         - org.mozilla.Thunderbird
-        # - org.mozilla.Firefox # Not present?
+        # - org.mozilla.Firefox # Not present in bluefin image?
         - org.gnome.DejaDup
     user: {}

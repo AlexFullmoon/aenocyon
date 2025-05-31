@@ -10,10 +10,6 @@ modules:
       - 7180 # Syncthing toggle
       - 4798 # Thinkpad battery thresholds
       - 986 # Thinkpad thermals
-      # - 1040 # Random wallpaper
-      # - 4736 # Smart Auto Move
-    # uninstall:
-    # - GSConnect
 
   - type: gschema-overrides
     include:

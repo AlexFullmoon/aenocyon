@@ -6,44 +6,46 @@ Use `ghcr.io/alexfullmoon/shapeshifter:stable` for rebase.
 
 ## Current changes from Bluefin-DX
 
-- [x] Solaar (RPM)
-  - Also adds udev rules
-- [x] Bitwarden (RPM)
-  - Biometric auth still not working.
-  - Browser connection to Firefox still not working.
-- [x] Alacritty (RPM)
-- [x] Sublime Text (RPM)
-- [x] Sublime Merge (RPM)
-- [x] SourceGit (RPM)
-- [x] Dolphin (RPM)
-  - Pulls a *lot* of KDE dependencies... Testing for now.
-  - Flatpak has too many limitations.
-- [x] Firefox (RPM)
-  - Testing for connection with Bitwarden. 
-- [x] LibreOffice (flatpak)
-- [x] WPS Office (flatpak)
-- [x] GearLever (flatpak)
-- [x] Betterbird instead of Thunderbird (flatpak)
-- [x] Obsidian (flatpak)
-- [x] Steam (flatpak)
-- [x] Discord (flatpak)
-- [x] Zed (flatpak)
-- [x] Gnome Extensions
+- RPMs
+  - Solaar
+    - Also adds udev rules
+  - Bitwarden
+    - Biometric auth glitches but works.
+    - Browser connection to Firefox works fine.
+  - Alacritty
+  - Sublime Text
+  - SourceGit
+  - Dolphin
+    - Pulls a *lot* of KDE dependencies, but flatpak has too many limitations.
+  - Firefox
+  - Crossover
+- Flatpaks
+  - LibreOffice
+  - GearLever
+  - Betterbird instead of Thunderbird
+  - Obsidian
+  - Steam
+  - Discord
+  - Zotero
+- Gnome extensions
   - Clipboard indicator, Solaar extension, Syncthing, Thinkpad stuff, Just Perfection
-- [x] Remove some extra bloat
+- Some Gnome config
+- GRUB config and theme
+- Services
+  - Masked avahi-daemon
+    - This is due to long-standing Gnome bug, filling printers list with all autodetected network printers from LAN.
+- Removed
   - Input Leap
-  - InputRemapper (it conflicts with Solaar anyway)
+  - InputRemapper (it conflicts with Solaar)
   - VSCode (don't like it)
-  
+  - Gnome Tweaks (Bluefin reincluded it)
+  - DejaDup
+
 ## TODO
 
 - [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
-- [ ] Check if anything else needs optfix
-- [ ] Seafile, Zotero, WindTerm, Ghostty - annoying to keep them as binaries.
+- [ ] Seafile, WindTerm, Ghostty
 - [ ] Implement chezmoi module: clean up and publish dotfiles repo
-- [ ] Copy some /etc configs?
-- [x] Make build tag actually say `stable` instead of `latest`
-- [x] Move away from rpm-ostree
  
 ## Current issues
 
@@ -51,4 +53,6 @@ Part of Bitwarden postinstall script is running `chcon system_u:object_r:usr_t:s
 
 Bitwarden has weird issue with biometric auth - probably due to missing aforementioned command.
 
-Zed editor doesn't install via RPM (unclear; can't add repo?) and conflicts with one of zfs commands, of all things.
+Ghostty RPM install conflicts with its own terminfo file from ncurses. Awaiting fixes.
+
+Crossover apparently doesn't really like being installed on readonly filesystem. Importing archived bottles work, though.

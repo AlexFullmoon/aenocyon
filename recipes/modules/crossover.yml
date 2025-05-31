@@ -5,16 +5,14 @@ modules:
   - type: dnf
     install:
       packages:
-        # Direct link. No idea if it would hold, but don't want to put it in repo, obviously
-        #- https://media-zh.codeweavers.com/pub/crossover/cxlinux/demo/crossover-25.0.0-1.rpm
-        # Downloading from local server
+        # Downloading installer from local server
         - https://public.moonlightwell.ru/build/cx/crossover-25.0.0-1.rpm
         # Prerequisites for Crossover itself (some are already present)
         - gtk3
         - perl-File-Copy
         - python3-gobject
         - vte291
-        # Prerequisites for bottles
+        # Prerequisites for bottles (x64 ones are already present)
         - fontconfig.i686
         - gstreamer1-plugins-bad-free.i686
         - gstreamer1-plugins-base.i686
@@ -31,7 +29,7 @@ modules:
 
   - type: script
     snippets:
-      # Installing additional files
+      # Installing additional files. Nothing to see here, move along.
       - "curl -sL https://public.moonlightwell.ru/build/cx/tie | base64 -d > /opt/cxoffice/share/crossover/data/tie.pub"
       - "curl -sL https://public.moonlightwell.ru/build/cx/lis | base64 -d > /opt/cxoffice/etc/license.sha256"
       - "curl -sL https://public.moonlightwell.ru/build/cx/lit | base64 -d > /opt/cxoffice/etc/license.txt"

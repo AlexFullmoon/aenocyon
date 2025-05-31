@@ -1,4 +1,5 @@
 #!/bin/bash
+# currently not used, took it from ublue repo.
 
 # Ghostty as appimage :(
 while [[ -z "${GHOSTTY:-}" || "${GHOSTTY:-}" == "null" ]]; do

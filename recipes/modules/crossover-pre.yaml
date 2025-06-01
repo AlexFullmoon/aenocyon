@@ -1,0 +1,12 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+# Dirty hack to reinstall some packages.
+modules:
+  - type: dnf
+    remove:  
+      auto-remove: false
+      packages:
+        - gstreamer1-plugins-bad-free.x86_64
+        - gstreamer1-plugins-base.x86_64
+        - gstreamer1-plugins-good.x86_64
+        - gstreamer1.x86_64

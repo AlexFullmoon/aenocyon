@@ -1,6 +1,10 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 # Crossover for MS Office.
+
+# Currently disabled gstreamer1 due to version conflict. 
+# See if Office works without it; find a way to keep versions in sync or something.
+# Note: reinstalling it drops most of Gnome.
 modules:
   - type: dnf
     install:
@@ -14,10 +18,10 @@ modules:
         - vte291
         # Prerequisites for bottles
         - fontconfig.i686
-        - gstreamer1-plugins-bad-free.i686
-        - gstreamer1-plugins-base.i686
-        - gstreamer1-plugins-good.i686
-        - gstreamer1.i686
+        # - gstreamer1-plugins-bad-free.i686
+        # - gstreamer1-plugins-base.i686
+        # - gstreamer1-plugins-good.i686
+        # - gstreamer1.i686
         - libXcomposite.i686
         - libXinerama.i686
         - nss-mdns.i686
@@ -25,10 +29,10 @@ modules:
         - sane-backends-libs.i686
         - vulkan-loader.i686
         # - fontconfig.x86_64
-        - gstreamer1-plugins-bad-free.x86_64
-        - gstreamer1-plugins-base.x86_64
-        - gstreamer1-plugins-good.x86_64
-        - gstreamer1.x86_64
+        # - gstreamer1-plugins-bad-free.x86_64
+        # - gstreamer1-plugins-base.x86_64
+        # - gstreamer1-plugins-good.x86_64
+        # - gstreamer1.x86_64
         # - libXcomposite.x86_64
         # - libXinerama.x86_64
         # - nss-mdns.x86_64

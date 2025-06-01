@@ -14,10 +14,10 @@ modules:
         - vte291
         # Prerequisites for bottles
         - fontconfig.i686
-        - gstreamer1-plugins-bad-free-1.26.1-1.i686
-        - gstreamer1-plugins-base-1.26.1-1.i686
-        - gstreamer1-plugins-good-1.26.1-1.i686
-        - gstreamer1-1.26.1-1.i686
+        - gstreamer1-plugins-bad-free-1.26.1-1.fc42.i686
+        - gstreamer1-plugins-base-1.26.1-1.fc42.i686
+        - gstreamer1-plugins-good-1.26.1-1.fc42.i686
+        - gstreamer1-1.26.1-1.fc42.i686
         - libXcomposite.i686
         - libXinerama.i686
         - nss-mdns.i686

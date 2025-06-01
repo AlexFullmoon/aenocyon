@@ -16,7 +16,7 @@ modules:
         - fontconfig.i686
         - gstreamer1-plugins-bad-free.i686
         - gstreamer1-plugins-base.i686
-        - gstreamer1-plugins.i686
+        - gstreamer1-plugins-good.i686
         - gstreamer1.i686
         - libXcomposite.i686
         - libXinerama.i686

@@ -2,9 +2,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 # Crossover for MS Office.
 
-# Currently disabled gstreamer1 due to version conflict. 
-# See if Office works without it; find a way to keep versions in sync or something.
-# Note: reinstalling it drops most of Gnome.
+# Currently disabled gstreamer1 due to version conflict. Office appears to work just fine without it.
 modules:
   - type: dnf
     install:
@@ -49,4 +47,4 @@ modules:
       - "curl -sL https://public.moonlightwell.ru/build/cx/lis | base64 -d > /opt/cxoffice/etc/license.sha256"
       - "curl -sL https://public.moonlightwell.ru/build/cx/lit | base64 -d > /opt/cxoffice/etc/license.txt"
 
-# Total result: ~200 packages, ~1Gb extra space 
+# Total result: ~200 packages, ~1Gb extra space :(

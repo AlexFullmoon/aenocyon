@@ -22,7 +22,7 @@ systemctl reboot
   - Solaar
     - Also adds udev rules
   - Bitwarden
-  - Alacritty
+  - ~~Alacritty~~
   - Sublime Text
   - SourceGit
   - Dolphin
@@ -46,7 +46,7 @@ systemctl reboot
 - Removed
   - Input Leap
   - InputRemapper (it conflicts with Solaar)
-  - VSCode (don't like it)
+  - ~~VSCode~~
   - Gnome Tweaks (Bluefin reincluded it)
   - DejaDup
 

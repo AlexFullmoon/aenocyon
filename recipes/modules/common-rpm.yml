@@ -24,7 +24,6 @@ modules:
       packages:
         - solaar
         # - solaar-udev # Adding rules file directly instead
-        - alacritty
         - sublime-text
         - sourcegit
         # - ghostty 
@@ -35,7 +34,6 @@ modules:
     remove:
       packages:
         - input-remapper
-        - code
         - gnome-tweaks
     optfix:
       - Bitwarden

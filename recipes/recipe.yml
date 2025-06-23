@@ -13,11 +13,12 @@ modules:
   - from-file: modules/init.yml
   - from-file: modules/gnome.yml
   - from-file: modules/overrides.yml
+  # - from-file: modules/origin-flatpak.yml
   - from-file: modules/common-flatpak.yml
   - from-file: modules/common-rpm.yml
-  # - from-file: modules/crossover-pre.yml
   - from-file: modules/crossover.yml
   # - from-file: modules/chezmoi.yml
+  - type: signing
 
 
 

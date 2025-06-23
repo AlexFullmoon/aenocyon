@@ -23,7 +23,6 @@ modules:
     install:
       packages:
         - solaar
-        # - solaar-udev # Adding rules file directly instead
         - sublime-text
         - sourcegit
         # - ghostty 
@@ -38,7 +37,6 @@ modules:
     optfix:
       - Bitwarden
       - sublime_text
-      - sublime_merge
       - sourcegit
 
   - type: script

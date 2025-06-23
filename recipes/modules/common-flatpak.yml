@@ -6,6 +6,7 @@ modules:
     notify: true
     system:
       install:
+        # Additions
         - com.discordapp.Discord
         - com.valvesoftware.Steam
         - org.libreoffice.LibreOffice

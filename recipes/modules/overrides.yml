@@ -8,5 +8,7 @@ modules:
         # This is due to log-standing Gnome bug with autodetecting network printers
         # I use only manually added printers and don't need a hundred of others
         # Manually unmask and enable to add a printer that requires it
+        #
+        # Currently not used
         - avahi-daemon.service
         - avahi-daemon.socket

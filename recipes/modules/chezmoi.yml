@@ -4,6 +4,6 @@
 # (TODO) Clean repo from secrets, make public
 modules:
     - type: chezmoi
-      repository: "https://git.moonlightwell.ru/fullmoon/dotfiles" # my dotfiles repo
-      all-users: false # make users have to enable chezmoi manually
+      repository: "https://github.com/AlexFullmoon/dotfiles"
+      all-users: true # make users have to enable chezmoi manually
       file-conflict-policy: replace # override changed files with those from the repo

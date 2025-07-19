@@ -39,9 +39,10 @@ systemctl reboot
 - Gnome extensions
   - Clipboard indicator, Solaar extension, Syncthing, Thinkpad stuff, Just Perfection
 - Some Gnome config
-- Services
-  - Masked avahi-daemon
-    - This is due to long-standing Gnome bug, filling printers list with all autodetected network printers from LAN. Manually adding via CUPS UI works just fine.
+- Chezmoi dotfiles sync
+- System config
+  - Enabled SMB1 for VM printer
+  - Disabled avahi-daemon listening on ethernet (make iun more universal?)
 - Removed
   - Input Leap
   - InputRemapper (it conflicts with Solaar)
@@ -52,7 +53,8 @@ systemctl reboot
 
 - [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
 - [ ] Seafile, WindTerm, Ghostty
-- [ ] Implement chezmoi module: clean up and publish dotfiles repo
+- [x] Implement chezmoi module: clean up and publish dotfiles repo
+- [x] Enable avahi-daemon but listen only on wifi (trying to limit printer spam) 
  
 ## Current issues
 

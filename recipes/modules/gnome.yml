@@ -12,8 +12,3 @@ modules:
       - 986 # Thinkpad thermals
 
   - type: gschema-overrides
-    include:
-      - zz1-xkb-config.gschema.override
-      - zz1-common.gschema.override
-      - zz1-extensions.gschema.override
-      # Paths starting with /apps/, /desktop/ or /system/ are deprecated. ???

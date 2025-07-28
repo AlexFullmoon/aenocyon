@@ -3,10 +3,10 @@
 # Flatpak apps selection
 modules:
   - type: default-flatpaks
-    notify: true
-    system:
-      install:
-        # Additions
+    configurations:  
+      - notify: false
+        scope: system
+        install:
         - com.discordapp.Discord
         - com.valvesoftware.Steam
         - org.libreoffice.LibreOffice
@@ -14,9 +14,3 @@ modules:
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
         - org.zotero.Zotero
-      remove:
-        - io.github.input_leap.input-leap
-        - org.mozilla.Thunderbird
-        # - org.mozilla.Firefox # Not present in bluefin image?
-        - org.gnome.DejaDup
-    user: {}

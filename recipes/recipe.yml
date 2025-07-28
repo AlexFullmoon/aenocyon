@@ -18,6 +18,7 @@ modules:
   - from-file: modules/custom-rpm.yml
   - from-file: modules/crossover.yml
   - from-file: modules/chezmoi.yml
+  - from-file: modules/bling.yml
   - type: signing
 
 

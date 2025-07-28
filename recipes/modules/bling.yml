@@ -1,0 +1,11 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+# Various smaller modules
+
+modules:
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - SourceCodePro
+        - JetBrainsMono

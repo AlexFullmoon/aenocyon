@@ -9,6 +9,6 @@ modules:
         # I use only manually added printers and don't need a hundred of others
         # Manually unmask and enable to add a printer that requires it
         #
-        # Currently not used
+        # Currently not used — required for scanner discovery.
         # - avahi-daemon.service
         # - avahi-daemon.socket

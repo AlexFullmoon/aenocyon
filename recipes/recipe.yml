@@ -12,8 +12,8 @@ image-version: stable
 modules:
   - from-file: modules/init.yml
   - from-file: modules/gnome.yml
-  # - from-file: modules/overrides.yml
-  # - from-file: modules/origin-flatpak.yml
+  # - from-file: modules/overrides.yml      # Curently not used
+  # - from-file: modules/origin-flatpak.yml # Under construction
   - from-file: modules/custom-flatpak.yml
   - from-file: modules/custom-rpm.yml
   - from-file: modules/crossover.yml

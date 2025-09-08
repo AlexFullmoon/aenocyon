@@ -4,11 +4,14 @@
 modules:
   - type: gnome-extensions
     install:
-      - 779 # Clipboard Indicator
+      - 7    # Removable Drive Menu
+      - 771  # Proxy Switcher
+      - 779  # Clipboard Indicator
+      - 986  # Thinkpad thermals
       - 3843 # Just Perfection
+      - 4798 # Thinkpad battery thresholds
+      - 5660 # Weather or not
       - 6162 # Solaar addon
       - 7180 # Syncthing toggle
-      - 4798 # Thinkpad battery thresholds
-      - 986 # Thinkpad thermals
 
   - type: gschema-overrides

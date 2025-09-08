@@ -29,7 +29,7 @@ modules:
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - firefox
         - firefox-langpacks
-        - dolphin
+        # - dolphin
     remove:
       packages:
         - input-remapper

@@ -24,8 +24,8 @@ systemctl reboot
   - Bitwarden
   - Sublime Text
   - SourceGit
-  - Dolphin
-    - Pulls a *lot* of KDE dependencies, but flatpak has too many limitations.
+  - ~~Dolphin~~
+    - ~~Pulls a *lot* of KDE dependencies, but flatpak has too many limitations.~~
   - Firefox
   - Crossover
 - Flatpaks
@@ -37,12 +37,12 @@ systemctl reboot
   - Discord
   - Zotero
 - Gnome extensions
-  - Clipboard indicator, Solaar extension, Syncthing, Thinkpad stuff, Just Perfection
+  - Clipboard indicator, Solaar extension, Syncthing, Thinkpad stuff, Just Perfection...
 - Some Gnome config
 - Chezmoi dotfiles sync
 - System config
   - Enabled SMB1 for VM printer
-  - Disabled avahi-daemon listening on ethernet (make iun more universal?)
+  - Disabled avahi-daemon listening on ethernet (make it more universal?)
 - Removed
   - Input Leap
   - InputRemapper (it conflicts with Solaar)
@@ -62,7 +62,7 @@ Notes after installation from ISO:
 
 - Need to set all flatpaks, adding flatpak module resets all of standard ones.
 - Extensions appear in the list as system, but they're disabled at start
-- Gsettings overrides apparently do not work.
+- Gsettings overrides apparently do not apply? Or was it some typo?
 - Grub config did not apply. Removed.
 - Overall, rebasing from bluefin-dx works better.
 - Consider moving to UBlue build template.

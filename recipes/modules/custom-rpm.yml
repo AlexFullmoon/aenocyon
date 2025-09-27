@@ -4,10 +4,11 @@
 modules:
 
   # Add repo files at build time. 
-  # (TODO) Where to download them? Filesystem appears to be readonly?
-  # - type: script
-  #   snippets:
-  #     - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
+  # TODO: Where to download them? Filesystem appears to be readonly
+  # See https://blue-build.org/reference/modules/files/ - apparently instead of /tpm /sysroot/tmp is required? Testing.
+  - type: script
+    snippets:
+      - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /sysroot/tmp/sourcegit.repo"
 
   - type: dnf
     repos:
@@ -17,7 +18,7 @@ modules:
         # - pgdev/ghostty # currently disabled due to ghostty bug https://github.com/ghostty-org/ghostty/issues/2542
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-        - sourcegit.repo
+        - /sysroot/tmp/sourcegit.repo
       keys:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     install:

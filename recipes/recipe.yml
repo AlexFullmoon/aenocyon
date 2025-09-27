@@ -1,19 +1,17 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: shapeshifter
-description: This is my personal OS image.
+description: Personal OS image. Intended for Thinkpad X1Y5.
 alt-tags:
   - stable
   - stable-weekly
 base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: stable
 
-# Executed in order
 modules:
   - from-file: modules/init.yml
   - from-file: modules/gnome.yml
-  # - from-file: modules/overrides.yml      # Curently not used
-  # - from-file: modules/origin-flatpak.yml # Under construction
+  # - from-file: modules/overrides.yml      # Currently not used
   - from-file: modules/custom-flatpak.yml
   - from-file: modules/custom-rpm.yml
   - from-file: modules/crossover.yml

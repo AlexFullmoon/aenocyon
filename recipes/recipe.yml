@@ -17,6 +17,7 @@ modules:
   - from-file: modules/crossover.yml
   - from-file: modules/chezmoi.yml
   - from-file: modules/bling.yml
+  - from-file: modules/cleanup.yml
   - type: signing
 
 

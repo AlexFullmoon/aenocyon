@@ -3,9 +3,6 @@
 # (Mostly) established apps selection
 modules:
 
-  # Add repo files at build time. 
-  # TODO: Where to download them? Filesystem appears to be readonly
-  # See https://blue-build.org/reference/modules/files/ - apparently instead of /tpm /sysroot/tmp is required? Testing.
   - type: script
     snippets:
       - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"

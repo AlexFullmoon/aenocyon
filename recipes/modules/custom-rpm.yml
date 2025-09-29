@@ -12,7 +12,7 @@ modules:
       copr:
         - ublue-os/staging
         - ublue-os/packages
-        # - pgdev/ghostty # currently disabled due to ghostty bug https://github.com/ghostty-org/ghostty/issues/2542
+        - pgdev/ghostty
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - /tmp/sourcegit.repo
@@ -23,7 +23,8 @@ modules:
         - solaar
         - sublime-text
         - sourcegit
-        # - ghostty 
+        - ghostty 
+        - seafile-client
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - firefox
         - firefox-langpacks
@@ -31,6 +32,7 @@ modules:
       packages:
         - input-remapper
         - gnome-tweaks
+        - fish # Temporary solution to solve ghostty terminfo bug; install from brew https://github.com/ghostty-org/ghostty/issues/2542
     optfix:
       - Bitwarden
       - sublime_text

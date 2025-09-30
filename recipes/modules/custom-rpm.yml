@@ -38,6 +38,7 @@ modules:
       - Bitwarden
       - sublime_text
       - sourcegit
+      - v2rayN
 
   - type: script
     snippets:

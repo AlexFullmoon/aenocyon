@@ -27,6 +27,9 @@ systemctl reboot
   - SourceGit
   - Firefox
   - Crossover
+  - Ghostty
+  - Seafile
+  - v2rayN
 - Flatpaks
   - LibreOffice
   - GearLever
@@ -51,7 +54,8 @@ systemctl reboot
 ## TODO
 
 - [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
-- [ ] Seafile, WindTerm, Ghostty
+  - Or drop Appimages
+- [x] Seafile, WindTerm, Ghostty
 - [x] Implement chezmoi module: clean up and publish dotfiles repo
 - [x] Enable avahi-daemon but listen only on wifi (trying to limit printer spam) 
  

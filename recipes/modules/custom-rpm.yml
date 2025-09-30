@@ -26,6 +26,7 @@ modules:
         - ghostty 
         - seafile-client
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+        - https://github.com/2dust/v2rayN/releases/download/latest/v2rayN-linux-rhel-x64.rpm 
         - firefox
         - firefox-langpacks
     remove:

@@ -2,8 +2,8 @@ name: bluebuild
 on:
   schedule:
     - cron:
-        "00 06 * * *" # build at 06:00 UTC every day
-        # (20 minutes after last ublue images start building)
+        "00 03 * * 2" # build at 06:00 MSK every Tuesday
+        # (a day after last ublue images start building)
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
@@ -41,5 +41,6 @@ jobs:
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
 
+          # Save some download space and somewhat improve efficiency (?)
           rechunk: true
           use_cache: true

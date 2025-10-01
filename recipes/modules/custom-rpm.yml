@@ -12,7 +12,7 @@ modules:
       copr:
         - ublue-os/staging
         - ublue-os/packages
-        - pgdev/ghostty
+        - scottames/ghostty
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - /tmp/sourcegit.repo

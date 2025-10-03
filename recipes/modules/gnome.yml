@@ -5,12 +5,13 @@ modules:
   - type: gnome-extensions
     install:
       - 7    # Removable Drive Menu
-      - 771  # Proxy Switcher
       - 779  # Clipboard Indicator
       - 986  # Thinkpad thermals
       - 3843 # Just Perfection
       - 4798 # Thinkpad battery thresholds
       - 5660 # Weather or not
+      - 5964 # Quick settings audio device hider
+      - 6000 # Quick settings audio device renamer
       - 6162 # Solaar addon
       - 7180 # Syncthing toggle
 

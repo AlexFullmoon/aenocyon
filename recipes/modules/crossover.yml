@@ -7,7 +7,7 @@ modules:
     install:
       packages:
         # Downloading installer from local server
-        - https://public.moonlightwell.ru/build/cx/crossover-25.0.0-1.rpm
+        - https://public.moonlightwell.ru/build/cx/crossover-25.0.1-1.rpm
         # Prerequisites for Crossover itself (some may be already present)
         - gtk3
         - perl-File-Copy

@@ -10,7 +10,6 @@ modules:
         - com.discordapp.Discord
         - com.valvesoftware.Steam
         - org.libreoffice.LibreOffice
-        - it.mijorus.gearlever
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
         - org.zotero.Zotero

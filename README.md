@@ -1,27 +1,26 @@
-# Shapeshifter - custom Bluefin-DX image
-[![Bluebuild build status](https://github.com/alexfullmoon/shapeshifter/actions/workflows/build.yml/badge.svg)](https://github.com/alexfullmoon/shapeshifter/actions/workflows/build.yml)&nbsp; ![Last commit](https://img.shields.io/github/last-commit/AlexFullmoon/shapeshifter?style=plastic&label=updated)
+# *Aenocyon* - custom Bluefin image
+[![Bluebuild build status](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml/badge.svg)](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml)&nbsp; ![Last commit](https://img.shields.io/github/last-commit/AlexFullmoon/aenocyon?style=plastic&label=updated)
 
 Using `bluefin-dx:stable`, customized for personal use and Thinkpad X1Y5 laptop.
 
 ## Installation
 
-From suitable image (preferably bluefin-dx):
+From suitable image (ideally bluefin-dx:stable):
 
 ```
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/alexfullmoon/shapeshifter:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/alexfullmoon/aenocyon:stable
 
 systemctl reboot
 
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/alexfullmoon/shapeshifter:stable
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/alexfullmoon/aenocyon:stable
 
 systemctl reboot
 ```
 
-## Current changes from Bluefin-DX
+## Current changes from Bluefin DX
 
-- RPMs
-  - Solaar
-    - Also adds udev rules
+- Installed as RPMs
+  - Solaar, along with udev rules
   - Bitwarden
   - Sublime Text
   - SourceGit
@@ -30,24 +29,22 @@ systemctl reboot
   - Ghostty
   - Seafile
   - v2rayN
-- Flatpaks
+- Installed as flatpaks
   - LibreOffice
-  - GearLever
   - Betterbird (instead of Thunderbird)
   - Obsidian
   - Steam
   - Discord
   - Zotero
-- Gnome extensions
-  - Clipboard indicator, Solaar extension, Syncthing, Thinkpad stuff, Just Perfection...
+- Several Gnome extensions
 - Some Gnome config
-- Chezmoi dotfiles sync
+- Personal dotfiles sync via chezmoi
 - System config
   - Enabled SMB1 for VM printer
   - Disabled avahi-daemon listening on ethernet
 - Removed
   - Input Leap
-  - InputRemapper (it conflicts with Solaar)
+  - InputRemapper
   - Gnome Tweaks
   - DejaDup
 
@@ -55,19 +52,22 @@ systemctl reboot
 
 - [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
   - Or drop Appimages
-- [x] Seafile, WindTerm, Ghostty
-- [x] Implement chezmoi module: clean up and publish dotfiles repo
-- [x] Enable avahi-daemon but listen only on wifi (trying to limit printer spam) 
+- [ ] Check if all prerequisites for Crossover are *really* necessary for Office and PDF
  
 ## Current issues
 
-Notes after installation from ISO:
+Ghostty RPM install conflicts with its own terminfo file from ncurses that come with fish. Awaiting fixes. For now, install fish from brew.
 
-- Need to set all flatpaks, adding flatpak module resets all of standard ones.
-- Extensions appear in the list as system, but they're disabled at start
-- Grub config patches do not apply.
-- Overall, rebasing from bluefin-dx works better.
+Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox
 
-Ghostty RPM install conflicts with its own terminfo file from ncurses. Awaiting fixes.
+## Making your own image
 
-Crossover apparently _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox
+See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+
+## Verification
+
+These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+
+```bash
+cosign verify --key cosign.pub ghcr.io/alexfullmoon/aenocyon
+```

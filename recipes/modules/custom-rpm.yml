@@ -5,14 +5,18 @@ modules:
 
   - type: script
     snippets:
+      # Get SourceGit repo file
       - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
+      # Allow adding repos with weak SHA-1 keys (Sublime Text, in particular)
+      - "update-crypto-policies --set LEGACY"
 
   - type: dnf
     repos:
       copr:
         - ublue-os/staging
         - ublue-os/packages
-        - scottames/ghostty
+        # - name: scottames/ghostty
+        #   chroot: fedora-42-x86_64
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - /tmp/sourcegit.repo
@@ -20,19 +24,17 @@ modules:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     install:
       packages:
-        - solaar
+        # - solaar
         - sublime-text
         - sourcegit
-        - ghostty 
-        - seafile-client
-        - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+        # - ghostty 
+        # - seafile-client
         - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-x64.rpm 
         - firefox
-        - firefox-langpacks
     remove:
       packages:
-        - input-remapper
-        - gnome-tweaks
+        # - input-remapper
+        # - gnome-tweaks
         - fish # Temporary solution to solve ghostty terminfo bug; install from brew https://github.com/ghostty-org/ghostty/issues/2542
     optfix:
       - Bitwarden
@@ -41,9 +43,9 @@ modules:
       - v2rayN
 
   - type: script
+    scripts:
+      - install-bitwarden.sh
     snippets:
-      # Additional Bitwarden stuff to do
-      - "ln -sf /usr/lib/opt/Bitwarden/bitwarden /etc/alternatives/bitwarden"
-      # - "chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy"
       # Cleanup
       - "rm -f /tmp/sourcegit.repo"
+      - "update-crypto-policies --set DEFAULT"

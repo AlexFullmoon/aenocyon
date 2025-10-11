@@ -1,18 +1,18 @@
-# *Aenocyon* - custom Bluefin image
+# *Aenocyon* - custom Bluefin LTS image
 [![Bluebuild build status](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml/badge.svg)](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml)&nbsp; ![Last commit](https://img.shields.io/github/last-commit/AlexFullmoon/aenocyon?style=plastic&label=updated)
 
-Using `bluefin-dx:stable`, customized for personal use and Thinkpad X1Y5 laptop.
+Using `bluefin-dx:lts`, customized for personal use and Thinkpad X1Y5 laptop. Image is currently in testing and missing some features.
 
 ## Installation
 
-From suitable image (ideally bluefin-dx:stable):
+From suitable image (ideally bluefin-dx:lts):
 
 ```
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/alexfullmoon/aenocyon:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/alexfullmoon/aenocyon:lts
 
 systemctl reboot
 
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/alexfullmoon/aenocyon:stable
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/alexfullmoon/aenocyon:lts
 
 systemctl reboot
 ```
@@ -20,14 +20,14 @@ systemctl reboot
 ## Current changes from Bluefin DX
 
 - Installed as RPMs
-  - Solaar, along with udev rules
+  - ~~Solaar, along with udev rules~~
   - Bitwarden
   - Sublime Text
   - SourceGit
   - Firefox
-  - Crossover
-  - Ghostty
-  - Seafile
+  - ~~Crossover~~
+  - ~~Ghostty~~
+  - ~~Seafile~~
   - v2rayN
 - Installed as flatpaks
   - LibreOffice
@@ -44,8 +44,8 @@ systemctl reboot
   - Disabled avahi-daemon listening on ethernet
 - Removed
   - Input Leap
-  - InputRemapper
-  - Gnome Tweaks
+  - ~~InputRemapper~~
+  - Gnome Twe~~aks
   - DejaDup
 
 ## TODO
@@ -53,6 +53,11 @@ systemctl reboot
 - [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
   - Or drop Appimages
 - [ ] Check if all prerequisites for Crossover are *really* necessary for Office and PDF
+- RPM host installation of:
+  - [ ] Solaar
+  - [ ] Seafile
+  - [ ] Crossover
+  - [ ] Ghostty
  
 ## Current issues
 
@@ -61,6 +66,8 @@ Ghostty RPM install conflicts with its own terminfo file from ncurses that come 
 Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox.
 
 Chezmoi gets some variables (un)defined if applied during build. Currently disabled in recipe, apply manually.
+
+Ghostty: bluebuild bug (?) with setting chroot for COPR.
 
 ## Making your own image
 

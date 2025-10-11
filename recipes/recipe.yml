@@ -3,9 +3,9 @@
 name: aenocyon
 description: Personal OS image. Intended for Thinkpad X1Y5.
 alt-tags:
-  - stable
+  - lts
 base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: stable
+image-version: lts
 
 modules:
   - from-file: modules/init.yml
@@ -13,16 +13,7 @@ modules:
   # - from-file: modules/overrides.yml      # Currently not used
   - from-file: modules/custom-flatpak.yml
   - from-file: modules/custom-rpm.yml
-  - from-file: modules/crossover.yml
+  # - from-file: modules/crossover.yml      # Temporary disabled
   # - from-file: modules/chezmoi.yml
   - from-file: modules/bling.yml
   - type: signing
-
-
-
-
-
-
-
-
-

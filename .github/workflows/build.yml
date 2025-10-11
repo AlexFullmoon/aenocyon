@@ -1,11 +1,12 @@
 name: bluebuild
 on:
-  schedule:
-    - cron:
-        "00 06 * * 3" # build at 09:00 MSK every Wednesday
+  # schedule:
+  #   - cron:
+  #       "00 06 * * 3" # build at 09:00 MSK every Wednesday
   push:
-    paths-ignore: # don't rebuild if only documentation has changed
+    paths-ignore: # don't rebuild if only documentation or this file have changed
       - "**.md"
+      - "**/build.yml"
 
   pull_request:
   workflow_dispatch: # allow manually triggering builds

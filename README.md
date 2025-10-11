@@ -1,7 +1,7 @@
 # *Aenocyon* - custom Bluefin LTS image
 [![Bluebuild build status](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml/badge.svg)](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml)&nbsp; ![Last commit](https://img.shields.io/github/last-commit/AlexFullmoon/aenocyon?style=plastic&label=updated)
 
-Using `bluefin-dx:lts`, customized for personal use and Thinkpad X1Y5 laptop. Image is currently in testing and missing some features.
+Using `bluefin-dx:lts`, customized for personal use and Thinkpad X1Y5 laptop. Image is currently **suspended** and missing some features.
 
 ## Installation
 

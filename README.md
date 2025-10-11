@@ -38,7 +38,7 @@ systemctl reboot
   - Zotero
 - Several Gnome extensions
 - Some Gnome config
-- Personal dotfiles sync via chezmoi
+- ~~Personal dotfiles sync via chezmoi~~
 - System config
   - Enabled SMB1 for VM printer
   - Disabled avahi-daemon listening on ethernet
@@ -58,7 +58,9 @@ systemctl reboot
 
 Ghostty RPM install conflicts with its own terminfo file from ncurses that come with fish. Awaiting fixes. For now, install fish from brew.
 
-Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox
+Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox.
+
+Chezmoi gets some variables (un)defined if applied during build. Currently disabled in recipe, apply manually.
 
 ## Making your own image
 

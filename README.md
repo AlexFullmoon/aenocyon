@@ -8,11 +8,11 @@ Using `bluefin-dx:lts`, customized for personal use and Thinkpad X1Y5 laptop. Im
 From suitable image (ideally bluefin-dx:lts):
 
 ```
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/alexfullmoon/aenocyon:lts
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/alexfullmoon/aenocyon:br-lts-lts-10
 
 systemctl reboot
 
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/alexfullmoon/aenocyon:lts
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/alexfullmoon/aenocyon:br-lts-lts-10
 
 systemctl reboot
 ```
@@ -20,14 +20,13 @@ systemctl reboot
 ## Current changes from Bluefin DX
 
 - Installed as RPMs
-  - ~~Solaar, along with udev rules~~
   - Bitwarden
   - Sublime Text
   - SourceGit
   - Firefox
   - ~~Crossover~~
-  - ~~Ghostty~~
-  - ~~Seafile~~
+  - Ghostty
+  - Seafile
   - v2rayN
 - Installed as flatpaks
   - LibreOffice
@@ -36,17 +35,13 @@ systemctl reboot
   - Steam
   - Discord
   - Zotero
+  - Solaar (along with udev rules)
 - Several Gnome extensions
 - Some Gnome config
 - ~~Personal dotfiles sync via chezmoi~~
 - System config
   - Enabled SMB1 for VM printer
   - Disabled avahi-daemon listening on ethernet
-- Removed
-  - Input Leap
-  - ~~InputRemapper~~
-  - Gnome Twe~~aks
-  - DejaDup
 
 ## TODO
 
@@ -54,20 +49,16 @@ systemctl reboot
   - Or drop Appimages
 - [ ] Check if all prerequisites for Crossover are *really* necessary for Office and PDF
 - RPM host installation of:
-  - [ ] Solaar
-  - [ ] Seafile
-  - [ ] Crossover
-  - [ ] Ghostty
+  - [x] Solaar — works fine as Flatpak
+  - [x] Seafile — wound working COPR
+  - [-] Crossover — requires i686 libraries, missing in Centos 10. Install in distrobox?
+  - [x] Ghostty — found a workaround for dnf bug.
  
 ## Current issues
-
-Ghostty RPM install conflicts with its own terminfo file from ncurses that come with fish. Awaiting fixes. For now, install fish from brew.
 
 Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox.
 
 Chezmoi gets some variables (un)defined if applied during build. Currently disabled in recipe, apply manually.
-
-Ghostty: bluebuild bug (?) with setting chroot for COPR.
 
 ## Making your own image
 

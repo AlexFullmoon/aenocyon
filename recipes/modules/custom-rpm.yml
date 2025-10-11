@@ -3,6 +3,13 @@
 # (Mostly) established apps selection
 modules:
 
+  - type: script
+    snippets:
+      # Get SourceGit repo file
+      - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
+      # Allow adding repos with weak SHA-1 keys (Sublime Text, in particular)
+      - "update-crypto-policies --set LEGACY"
+
   - type: dnf
     repos:
       copr:
@@ -19,10 +26,6 @@ modules:
 
   - type: script
     snippets:
-      # Get SourceGit repo file
-      - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
-      # Allow adding repos with weak SHA-1 keys (Sublime Text, in particular)
-      - "update-crypto-policies --set LEGACY"
       # Reapply chroot for ghostty COPR due to dnf bug in Centos 
       - "dnf config-manager --save --setopt=*.baseurl=https://download.copr.fedorainfracloud.org/results/scottames/ghostty/fedora-42-x86_64/ copr:copr.fedorainfracloud.org:scottames:ghostty"
 

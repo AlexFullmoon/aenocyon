@@ -13,3 +13,4 @@ modules:
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian
         - org.zotero.Zotero
+        - io.github.pwr_solaar.solaar

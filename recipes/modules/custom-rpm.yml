@@ -3,39 +3,43 @@
 # (Mostly) established apps selection
 modules:
 
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/staging
+        - ublue-os/packages
+        - alebastr/seafile-client 
+        - name: scottames/ghostty
+          chroot: fedora-42-x86_64
+      files:
+        - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+        - /tmp/sourcegit.repo
+      keys:
+        - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+
   - type: script
     snippets:
       # Get SourceGit repo file
       - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
       # Allow adding repos with weak SHA-1 keys (Sublime Text, in particular)
       - "update-crypto-policies --set LEGACY"
+      # Reapply chroot for ghostty COPR due to dnf bug in Centos 
+      - "dnf config-manager --save --setopt=*.baseurl=https://download.copr.fedorainfracloud.org/results/scottames/ghostty/fedora-42-x86_64/ copr:copr.fedorainfracloud.org:scottames:ghostty"
 
   - type: dnf
-    repos:
-      copr:
-        - ublue-os/staging
-        - ublue-os/packages
-        # - name: scottames/ghostty
-        #   chroot: fedora-42-x86_64
-      files:
-        - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-        - /tmp/sourcegit.repo
-      keys:
-        - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     install:
       packages:
-        # - solaar
         - sublime-text
         - sourcegit
-        # - ghostty 
-        # - seafile-client
+        - ghostty 
+        - seafile-client
         - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-x64.rpm 
         - firefox
-    remove:
-      packages:
-        # - input-remapper
-        # - gnome-tweaks
-        - fish # Temporary solution to solve ghostty terminfo bug; install from brew https://github.com/ghostty-org/ghostty/issues/2542
+    # remove:
+    #   packages:
+    #     # - input-remapper
+    #     # - gnome-tweaks
+    #     - fish # Temporary solution to solve ghostty terminfo bug; install from brew https://github.com/ghostty-org/ghostty/issues/2542
     optfix:
       - Bitwarden
       - sublime_text

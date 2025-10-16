@@ -14,7 +14,7 @@ modules:
         - ublue-os/packages
         - scottames/ghostty
         - dsommers/openvpn3
-        - architektapx/zen-browser
+        - sneexy/zen-browser
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - /tmp/sourcegit.repo

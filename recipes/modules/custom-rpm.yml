@@ -13,6 +13,7 @@ modules:
         - ublue-os/staging
         - ublue-os/packages
         - scottames/ghostty
+        - dsommers/openvpn3
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - /tmp/sourcegit.repo
@@ -25,6 +26,7 @@ modules:
         - sourcegit
         - ghostty 
         - seafile-client
+        - openvpn3-client
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-x64.rpm 
         - firefox

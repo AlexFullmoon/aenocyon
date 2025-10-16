@@ -42,6 +42,6 @@ jobs:
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
 
-          # Save some download space and somewhat improve efficiency (?)
+          # Save some download space and somewhat improve download efficiency
           rechunk: true
           use_cache: true

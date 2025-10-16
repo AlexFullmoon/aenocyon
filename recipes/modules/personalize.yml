@@ -1,0 +1,17 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+# Various smaller modules
+
+modules:
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - SourceCodePro
+        - JetBrainsMono
+
+  # Chezmoi module currently disabled
+  # - type: chezmoi
+  #   repository: "https://github.com/AlexFullmoon/dotfiles"
+  #   all-users: true # make users have to enable chezmoi manually
+  #   file-conflict-policy: replace # override changed files with those from the repo

@@ -35,7 +35,7 @@ modules:
       packages:
         - input-remapper
         - gnome-tweaks
-        - fish # Temporary solution to solve ghostty terminfo bug; install from brew https://github.com/ghostty-org/ghostty/issues/2542
+        # - fish # Temporary solution to solve ghostty terminfo bug; install from brew https://github.com/ghostty-org/ghostty/issues/2542
     optfix:
       - Bitwarden
       - sublime_text

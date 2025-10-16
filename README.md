@@ -51,8 +51,9 @@ systemctl reboot
 ## TODO
 
 - [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
-  - Or drop Appimages
-- [ ] Check if all prerequisites for Crossover are *really* necessary for Office and PDF
+  - Or drop Appimages.
+- [ ] Check if all prerequisites for Crossover are *really* necessary for Office and PDF.
+- [ ] Decide what to do with chezmoi module.
  
 ## Current issues
 

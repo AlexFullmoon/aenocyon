@@ -25,6 +25,7 @@ systemctl reboot
   - Sublime Text
   - SourceGit
   - Firefox
+  - Zen Browser
   - Crossover
   - Ghostty
   - Seafile
@@ -56,8 +57,6 @@ systemctl reboot
 - [ ] Decide what to do with chezmoi module.
  
 ## Current issues
-
-Ghostty RPM install conflicts with its own terminfo file from ncurses that come with fish. Awaiting fixes. For now, install fish from brew.
 
 Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox.
 

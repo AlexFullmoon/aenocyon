@@ -42,11 +42,10 @@ systemctl reboot
 - System config
   - Enabled SMB1 for VM printer
   - Disabled avahi-daemon listening on ethernet
+  - Disabled random MAC address by default
 - Removed
-  - Input Leap
   - InputRemapper
   - Gnome Tweaks
-  - DejaDup
 
 ## TODO
 

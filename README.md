@@ -25,7 +25,6 @@ systemctl reboot
   - Sublime Text
   - SourceGit
   - Firefox
-  - Zen Browser
   - Crossover
   - Ghostty
   - Seafile

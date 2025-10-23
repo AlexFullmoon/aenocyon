@@ -29,8 +29,8 @@ modules:
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-x64.rpm 
         - firefox
-        - dbus-glib # Zotero prerequisite
-        - zotero
+        # - dbus-glib # Zotero prerequisite
+        # - zotero
         # Testing area
     remove:
       packages:
@@ -41,7 +41,7 @@ modules:
       - sublime_text
       - sourcegit
       - v2rayN
-      - zotero
+      # - zotero
 
   - type: script
     snippets:

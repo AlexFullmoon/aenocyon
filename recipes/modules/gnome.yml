@@ -7,6 +7,8 @@ modules:
       - 7    # Removable Drive Menu
       - 779  # Clipboard Indicator
       - 986  # Thinkpad thermals
+      - 1460 # Vitals
+      - 2236 # Night theme switcher
       - 3843 # Just Perfection
       - 4798 # Thinkpad battery thresholds
       - 5660 # Weather or not
@@ -14,5 +16,6 @@ modules:
       - 6000 # Quick settings audio device renamer
       - 6162 # Solaar addon
       - 7180 # Syncthing toggle
+      - 7269 # Bilingual app search
 
   - type: gschema-overrides

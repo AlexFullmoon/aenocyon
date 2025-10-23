@@ -13,7 +13,6 @@ modules:
         - ublue-os/staging
         - ublue-os/packages
         - scottames/ghostty
-        - thangckt/thang_foss 
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - /tmp/sourcegit.repo
@@ -29,8 +28,7 @@ modules:
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-x64.rpm 
         - firefox
-        # - dbus-glib # Zotero prerequisite
-        # - zotero
+        - dbus-glib # Zotero prerequisite
         # Testing area
     remove:
       packages:
@@ -41,7 +39,6 @@ modules:
       - sublime_text
       - sourcegit
       - v2rayN
-      # - zotero
 
   - type: script
     snippets:

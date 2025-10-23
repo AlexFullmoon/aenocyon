@@ -35,7 +35,6 @@ systemctl reboot
   - Obsidian
   - Steam
   - Discord
-  - Zotero
 - Several Gnome extensions
 - Some Gnome config
 - ~~Personal dotfiles sync via chezmoi~~

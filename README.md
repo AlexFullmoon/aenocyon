@@ -45,6 +45,7 @@ systemctl reboot
 - Removed
   - InputRemapper
   - Gnome Tweaks
+  - Tailscale
 
 ## TODO
 
@@ -52,6 +53,7 @@ systemctl reboot
   - Or drop Appimages.
 - [ ] Check if all prerequisites for Crossover are *really* necessary for Office and PDF.
 - [ ] Decide what to do with chezmoi module.
+- [ ] Add keyboard layout
  
 ## Current issues
 

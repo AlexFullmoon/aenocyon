@@ -10,8 +10,6 @@ modules:
   - type: dnf
     repos:
       copr:
-        - ublue-os/staging
-        - ublue-os/packages
         - scottames/ghostty
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
@@ -29,11 +27,11 @@ modules:
         - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-64.rpm 
         - firefox
         - dbus-glib # Zotero prerequisite
-        # Testing area
     remove:
       packages:
         - input-remapper
         - gnome-tweaks
+        - tailscale
     optfix:
       - Bitwarden
       - sublime_text

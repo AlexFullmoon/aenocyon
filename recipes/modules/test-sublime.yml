@@ -3,20 +3,22 @@
 # Fiddling with SublimeText outdated RPM
 modules:
 
-  - type: script
-    snippets:
-      - "dnf5 config-manager setopt tsflags=nocrypto"
-
   - type: dnf
     repos:
       files:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
       keys:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+
+  - type: script
+    snippets:
+      - "dnf5 config-manager setopt sublime-text.tsflags=nocrypto"
+
+  - type: dnf
     install:
       packages:
         - sublime-text
 
   - type: script
     snippets:
-      - "dnf5 config-manager unsetopt tsflags"
+      - "dnf5 config-manager unsetopt sublime-text.tsflags"

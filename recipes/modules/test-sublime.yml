@@ -5,7 +5,7 @@ modules:
 
   - type: script
     snippets:
-      - "dnf5 config-manager setopt sublime-text.tsflags=nocrypto"
+      - "dnf5 config-manager setopt tsflags=nocrypto"
 
   - type: dnf
     repos:
@@ -19,4 +19,4 @@ modules:
 
   - type: script
     snippets:
-      - "dnf5 config-manager sublime-text.unsetopt tsflags"
+      - "dnf5 config-manager unsetopt tsflags"

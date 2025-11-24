@@ -12,13 +12,20 @@ modules:
 
   - type: script
     snippets:
-      - "dnf5 config-manager setopt tsflags=nocrypto"
+      - "dnf5 install -y --nodigest sublime-text"
+      - "mv /var/opt/sublime_text /usr/lib/opt/sublime_text" # ↓ Not needed for bluebuild
+      # - "echo 'L+ /var/opt/sublime_text - - - - /usr/lib/opt/sublime_text' >>/usr/lib/tmpfiles.d/manual-optfix.conf" 
 
-  - type: dnf
-    install:
-      packages:
-        - sublime-text
+  # - type: script
+  #   snippets:
+  #     - "dnf5 config-manager setopt tsflags=nocrypto
 
-  - type: script
-    snippets:
-      - "dnf5 config-manager unsetopt tsflags"
+
+  # - type: dnf
+  #   install:
+  #     packages:
+  #       - sublime-text
+
+  # - type: script
+  #   snippets:
+  #     - "dnf5 config-manager unsetopt tsflags"

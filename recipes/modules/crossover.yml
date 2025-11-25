@@ -15,7 +15,7 @@ modules:
         - vte291
         # Prerequisites for bottles
         - fontconfig.i686
-        # Fails building due to version conflict; Office works without them
+        # Building fails due to version conflict; Office works without them
         # - gstreamer1-plugins-bad-free.i686
         # - gstreamer1-plugins-base.i686
         # - gstreamer1-plugins-good.i686
@@ -27,8 +27,6 @@ modules:
         - sane-backends-libs.i686
         - vulkan-loader.i686
         # x64 versions of the above are already present
-    optfix:
-      - cxoffice
 
   - type: script
     snippets:

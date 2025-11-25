@@ -22,7 +22,7 @@ systemctl reboot
 - Installed as RPMs
   - Solaar, along with udev rules
   - Bitwarden
-  - Sublime Text
+  - ~~Sublime Text~~
   - SourceGit
   - Firefox
   - Crossover
@@ -60,6 +60,8 @@ systemctl reboot
 Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox.
 
 Chezmoi gets some variables (un)defined if applied during build. Currently disabled in recipe, apply manually.
+
+SublimeText currently has issues with their RPM packaging unsupported in F43. Install manually into distrobox via `sudo rpm -ivh --nodigest --nofiledigest sublime-text-4200-1.x86_64.rpm`
 
 ## Making your own image
 

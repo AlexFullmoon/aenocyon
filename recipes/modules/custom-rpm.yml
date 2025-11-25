@@ -32,12 +32,6 @@ modules:
         - input-remapper
         - gnome-tweaks
         - tailscale
-    # Apparently deprecated and does nothing. Let's test.
-    # optfix:
-    #   - Bitwarden
-    #   - sublime_text
-    #   - sourcegit
-    #   - v2rayN
 
   - type: script
     snippets:

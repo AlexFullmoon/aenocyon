@@ -5,7 +5,6 @@ modules:
   - type: gnome-extensions
     install:
       - 7    # Removable Drive Menu
-      - 779  # Clipboard Indicator
       - 986  # Thinkpad thermals
       - 1460 # Vitals
       - 2236 # Night theme switcher
@@ -17,5 +16,6 @@ modules:
       - 6162 # Solaar addon
       - 7180 # Syncthing toggle
       - 7269 # Bilingual app search
+      - 8834 # Copyous
 
   - type: gschema-overrides

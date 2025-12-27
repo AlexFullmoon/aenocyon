@@ -1,0 +1,69 @@
+// M-Layout keyboard layout
+// Using US QWERTY keyboard as base
+
+default partial alphanumeric_keys
+xkb_symbols "m-layout-en" {
+    include "us(basic)" //Fallback
+    name[Group1]= "M-Layout (EN)";
+
+    // 1st row
+    key <AE01> {[ 1, exclam, onesuperior, U2206]};                       // SUPERSCRIPT ONE - INCREMENT
+    key <AE02> {[ 2, at, twosuperior, at ]};                             // SUPERSCRIPT TWO - COMMERCIAL AT
+    key <AE03> {[ 3, numbersign , threesuperior, numbersign ]};          // SUPERSCRIPT THREE - NUMBER SIGN
+    key <AE04> {[ 4, dollar, NoSymbol, dollar ]};                        // <none> - DOLLAR SIGN
+    key <AE05> {[ 5, percent, permille, percent ]};                      // PER MILLE SIGN - PERCENT SIGN
+    key <AE06> {[ 6, asciicircum, uparrow, asciicircum ]};               // UPWARDS ARROW - CIRCUMFLEX ACCENT
+    key <AE07> {[ 7, ampersand, NoSymbol, ampersand ]};                  // <none> - AMPERSAND
+    key <AE08> {[ 8, asterisk, infinity, asterisk ]};                    // INFINITY - ASTERISK
+    key <AE09> {[ 9, parenleft, leftarrow, U27e8 ]};                     // LEFTWARDS ARROW - MATHEMATICAL LEFT ANGLE BRACKET
+    key <AE10> {[ 0, parenright , rightarrow, U27e9 ]};                  // RIGHTWARDS ARROW - MATHEMATICAL RIGHT ANGLE BRACKET
+    key <AE11> {[ minus, underscore , emdash, endash ]};                 // EM DASH - EN DASH
+    key <AE12> {[ equal, plus, notequal, plusminus ]};                   // NOT EQUAL TO - PLUS-MINUS SIGN
+
+    // 2nd row
+    key <AD01> {[ q, Q, partialderivative , onehalf ]};                  // PARTIAL DIFFERENTIAL - VULGAR FRACTION ONE HALF
+    key <AD02> {[ w, W, U26a0, onethird ]};                              // WARNING SIGN - VULGAR FRACTION ONE THIRD
+    key <AD03> {[ e, E, EuroSign, onequarter ]};                         // EURO SIGN - VULGAR FRACTION ONE QUARTER
+    key <AD04> {[ r, R, registered, radical ]};                          // REGISTERED SIGN - SQUARE ROOT
+    key <AD05> {[ t, T, Greek_tau, trademark ]};                         // GREEK SMALL LETTER TAU - TRADE MARK SIGN
+    key <AD06> {[ y, Y, U2714, U2203 ]};                                 // HEAVY CHECK MARK - THERE EXISTS
+    key <AD07> {[ u, U, Greek_mu, U2200 ]};                              // GREEK SMALL LETTER MU - FOR ALL
+    key <AD08> {[ i, I, Greek_pi, identical ]};                          // GREEK SMALL LETTER PI - IDENTICAL TO
+    key <AD09> {[ o, O, Greek_OMEGA, notsign ]};                         // GREEK CAPITAL LETTER OMEGA - NOT SIGN
+    key <AD10> {[ p, P, minutes, seconds ]};                             // PRIME - DOUBLE PRIME
+    key <AD11> {[ bracketleft , braceleft, bracketleft, braceleft ]};    // LEFT SQUARE BRACKET - LEFT CURLY BRACKET
+    key <AD12> {[ bracketright, braceright , bracketright, braceright ]};// RIGHT SQUARE BRACKET - RIGHT CURLY BRACKET
+    
+    // 3rd row
+    key <AC01> {[ a, A, approxeq, U2220 ]};                              // ALMOST EQUAL TO - ANGLE
+    key <AC02> {[ s, S, U2211, U262d ]};                                 // N-ARY SUMMATION - HAMMER AND SICKLE
+    key <AC03> {[ d, D, degree, U2300 ]};                                // DEGREE SIGN - DIAMETER SIGN
+    key <AC04> {[ f, F, sterling, U2135 ]};                              // POUND SIGN - ALEF SYMBOL
+    key <AC05> {[ g, G, section, paragraph ]};                           // SECTION SIGN - PILCROW SIGN
+    key <AC06> {[ h, H, U20bd, U210f ]};                                 // RUBLE SIGN - PLANCK CONSTANT OVER TWO PI
+    key <AC07> {[ j, J, implies, ifonlyif ]};                            // RIGHTWARDS DOUBLE ARROW - LEFT RIGHT DOUBLE ARROW
+    key <AC08> {[ k, K, NoSymbol, U226a ]};                              // <none> - MUCH LESS-THAN
+    key <AC09> {[ l, L, Greek_lamda, U226b ]};                           // GREEK SMALL LETTER LAMDA - MUCH GREATER-THAN
+    key <AC10> {[ semicolon, colon, semicolon, colon ]};                 // SEMICOLON - COLON
+    key <AC11> {[ apostrophe, quotedbl, apostrophe, quotedbl ]};         // APOSTROPHE - QUOTATION MARK
+    
+    // 4th row
+    key <AB01> {[ z, Z, U2622, U267b ]};                                 // RADIOACTIVE SIGN - BLACK UNIVERSAL RECYCLING SYMBOL
+    key <AB02> {[ x, X, multiply, periodcentered ]};                     // MULTIPLICATION SIGN - MIDDLE DOT
+    key <AB03> {[ c, C, copyright, cent ]};                              // COPYRIGHT SIGN - CENT SIGN
+    key <AB04> {[ v, V, downarrow, openstar ]};                          // DOWNWARDS ARROW - WHITE STAR
+    key <AB05> {[ b, B, enfilledcircbullet, U2605 ]};                    // BULLET - BLACK STAR
+    key <AB06> {[ n, N, U2718, numerosign ]};                            // HEAVY BALLOT X - NUMERO SIGN
+    key <AB07> {[ m, M, U2212, U23fb ]};                                 // MINUS SIGN - POWER SYMBOL
+    key <AB08> {[ comma, leftcaret, guillemetleft, leftcaret ]};         // LEFT-POINTING DOUBLE ANGLE QUOTATION MARK  - LESS-THAN SIGN
+    key <AB09> {[ period, rightcaret , guillemetright, rightcaret ]};    // RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK - GREATER-THAN SIGN
+    key <AB10> {[ slash, question, ellipsis, dead_acute ]};              // HORIZONTAL ELLIPSIS - ACUTE ACCENT
+    
+    // Other
+    key <SPCE> {[ space, space, nobreakspace, NoSymbol ]};               // NO-BREAK SPACE - <none>
+    key <TLDE> {[ grave, asciitilde , grave, asciitilde ]};              // GRAVE ACCENT - TILDE
+    key <BKSL> {[ backslash, bar, backslash, bar ]};                     // BACKSLASH - VERTICAL LINE
+
+    include "level3(ralt_switch)"
+
+};

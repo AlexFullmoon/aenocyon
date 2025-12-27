@@ -43,6 +43,7 @@ systemctl reboot
   - Disabled avahi-daemon listening on ethernet
   - Disabled random MAC address by default
   - Added Russian root CA certificates (might require running `sudo update-ca-trust`)
+  - Added keyboard layout [M-Layout](https://github.com/alexfullmoon/m-layout)
 - Removed
   - InputRemapper
   - Gnome Tweaks

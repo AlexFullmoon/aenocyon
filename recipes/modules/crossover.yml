@@ -6,8 +6,8 @@ modules:
   - type: dnf
     install:
       packages:
-        # Downloading installer from local server
-        - https://public.moonlightwell.ru/build/cx/crossover-25.1.0-1.rpm
+        # Downloading installer from server
+        - https://relay.moonlightwell.ru/cx/crossover-25.1.0-1.rpm
         # Prerequisites for Crossover itself (some may be already present)
         - gtk3
         - perl-File-Copy
@@ -31,7 +31,7 @@ modules:
   - type: script
     snippets:
       # Installing additional files. Nothing to see here, move along.
-      - "curl -sL https://public.moonlightwell.ru/build/cx/tie | base64 -d > /opt/cxoffice/share/crossover/data/tie.pub"
-      - "curl -sL https://public.moonlightwell.ru/build/cx/lis | base64 -d > /opt/cxoffice/etc/license.sha256"
-      - "curl -sL https://public.moonlightwell.ru/build/cx/lit | base64 -d > /opt/cxoffice/etc/license.txt"
+      - "curl -sL https://relay.moonlightwell.ru/cx/tie | base64 -d > /opt/cxoffice/share/crossover/data/tie.pub"
+      - "curl -sL https://relay.moonlightwell.ru/cx/lis | base64 -d > /opt/cxoffice/etc/license.sha256"
+      - "curl -sL https://relay.moonlightwell.ru/cx/lit | base64 -d > /opt/cxoffice/etc/license.txt"
 

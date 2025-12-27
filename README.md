@@ -42,6 +42,7 @@ systemctl reboot
   - Enabled SMB1 for VM printer
   - Disabled avahi-daemon listening on ethernet
   - Disabled random MAC address by default
+  - Added Russian root CA certificates (might require running `sudo update-ca-trust`)
 - Removed
   - InputRemapper
   - Gnome Tweaks

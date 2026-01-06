@@ -2,15 +2,22 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 # (Mostly) established apps selection
 modules:
-
   - type: script
     snippets:
       - "curl https://codeberg.org/api/packages/yataro/rpm.repo | sed -e 's/gpgcheck=1/gpgcheck=0/' > /tmp/sourcegit.repo"
 
   - type: dnf
     repos:
-      copr:
-        - scottames/ghostty
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    install:
+      packages:
+        - terra-release
+
+  - type: dnf
+    repos:
+      # copr:
+      #   - scottames/ghostty
       files:
         # - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
         - /tmp/sourcegit.repo
@@ -21,10 +28,11 @@ modules:
         - solaar
         # - sublime-text
         - sourcegit
-        - ghostty 
+        - ghostty
+        - zed-editor
         - seafile-client
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-64.rpm 
+        - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-64.rpm
         - firefox
         - dbus-glib # Zotero prerequisite
     remove:

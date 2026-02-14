@@ -11,9 +11,6 @@ modules:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - /tmp/sourcegit.repo
-        # - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-      # keys:
-      #   - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
     install:
       packages:
         - terra-release
@@ -22,14 +19,13 @@ modules:
     install:
       packages:
         - solaar
-        # - sublime-text
         - sourcegit
         - ghostty
         - zed
         - zed-rename-zeditor
         - seafile-client
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-        - https://github.com/Happ-proxy/happ-desktop/releases//latest/download/Happ.linux.x64.rpm
+        - https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.rpm
         - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-64.rpm
         - firefox
         - dbus-glib # Zotero prerequisite

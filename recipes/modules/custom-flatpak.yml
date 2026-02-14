@@ -3,12 +3,11 @@
 # Flatpak apps selection
 modules:
   - type: default-flatpaks
-    configurations:  
+    configurations:
       - notify: false
         scope: system
         install:
         - com.discordapp.Discord
-        - com.valvesoftware.Steam
         - org.libreoffice.LibreOffice
         - eu.betterbird.Betterbird
         - md.obsidian.Obsidian

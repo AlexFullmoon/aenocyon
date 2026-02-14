@@ -28,6 +28,7 @@ modules:
         - https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.rpm
         - https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-linux-rhel-64.rpm
         - firefox
+        - steam
         - dbus-glib # Zotero prerequisite
     remove:
       packages:

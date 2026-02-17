@@ -7,7 +7,7 @@ modules:
       - notify: false
         scope: system
         install:
-        - com.discordapp.Discord
-        - org.libreoffice.LibreOffice
-        - eu.betterbird.Betterbird
-        - md.obsidian.Obsidian
+          - com.discordapp.Discord
+          - org.libreoffice.LibreOffice
+          - eu.betterbird.Betterbird
+          - md.obsidian.Obsidian

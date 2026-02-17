@@ -22,25 +22,26 @@ systemctl reboot
 - Installed as RPMs
   - Solaar, along with udev rules
   - Bitwarden
-  - ~~Sublime Text~~
   - SourceGit
   - Firefox
   - Crossover
   - Ghostty
+  - Zec
+  - Steam
   - Seafile
   - v2rayN
+  - Happ
 - Installed as flatpaks
   - LibreOffice
   - Betterbird (instead of Thunderbird)
   - Obsidian
-  - Steam
   - Discord
-- Several Gnome extensions
+- Several Gnome extensions along with some config
 - Some Gnome config
 - ~~Personal dotfiles sync via chezmoi~~
 - System config
   - Enabled SMB1 for VM printer
-  - Disabled avahi-daemon listening on ethernet
+  - Disabled avahi-daemon
   - Disabled random MAC address by default
   - Added Russian root CA certificates (might require running `sudo update-ca-trust`)
   - Added keyboard layout [M-Layout](https://github.com/alexfullmoon/m-layout)

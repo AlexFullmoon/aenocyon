@@ -5,10 +5,10 @@ modules:
   - type: systemd
     system:
       masked:
-        # This is due to log-standing Gnome bug with autodetecting network printers
+        # This is due to log-standing Gnome/Avahi bug with autodetecting network printers
         # I use only manually added printers and don't need a hundred of others
         # Manually unmask and enable to add a printer that requires it
         #
-        # Currently not used — required for scanner discovery.
+        # Warning: this also breaks Airscan discovery.
         - avahi-daemon.service
         - avahi-daemon.socket

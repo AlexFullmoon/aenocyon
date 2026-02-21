@@ -4,12 +4,18 @@ natural-scroll=true
 [org.gnome.desktop.peripherals.touchpad]
 two-finger-scrolling-enabled=true
 
+[org.gnome.desktop.wm.keybindings]
+activate-window-menu=['<Super>space']
+
 [org.gnome.desktop.wm.preferences]
 action-double-click-titlebar='toggle-maximize'
 action-middle-click-titlebar='none'
 action-right-click-titlebar='menu'
 button-layout=':minimize,close'
 focus-mode='click'
+
+[org.gnome.desktop.input-sources]
+xkb-options=['grp:caps_toggle']
 
 [org.gnome.desktop.interface]
 accent-color='slate'

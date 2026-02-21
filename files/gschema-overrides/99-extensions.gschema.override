@@ -35,3 +35,14 @@ startup-status=0
 support-notifier-showed-version=34
 support-notifier-type=0
 world-clock=false
+
+[org.gnome.shell.extensions.quicksettings-audio-devices-renamer]
+input-names-map={'Микрофон – ThinkPad Dock USB Audio': 'Микрофон – ThinkPad Dock', 'Цифровой вход (S/PDIF) – ThinkPad Dock USB Audio': 'S/PDIF – ThinkPad Dock', 'Digital Microphone – Comet Lake PCH-LP cAVS': 'Микрофон'}
+output-names-map={'Аналоговый выход – ThinkPad Dock USB Audio': 'Аналоговый – ThinkPad Dock', 'Цифровой выход (S/PDIF) – ThinkPad Dock USB Audio': 'S/PDIF – ThinkPad Dock', 'HDMI / DisplayPort 1 Output – Comet Lake PCH-LP cAVS': 'HDMI / DP', 'Speaker – Comet Lake PCH-LP cAVS': 'Speaker', 'Холостой выход': 'Холостой выход'}
+
+[org.gnome.shell.extensions.syncthing-toggle]
+service-name='homebrew.syncthing.service'
+start-stop-only=true
+
+[org.gnome.shell.extensions.Logo-menu]
+hide-forcequit=false

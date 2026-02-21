@@ -1,4 +1,5 @@
-# *Aenocyon* - custom Bluefin image
+# _Aenocyon_ - custom Bluefin image
+
 [![Bluebuild build status](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml/badge.svg)](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml)&nbsp; ![Last commit](https://img.shields.io/github/last-commit/AlexFullmoon/aenocyon?style=plastic&label=updated)
 
 Using `bluefin-dx:stable`, customized for personal use and Thinkpad X1Y5 laptop.
@@ -54,10 +55,10 @@ systemctl reboot
 
 - [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
   - Or drop Appimages.
-- [ ] Check if all prerequisites for Crossover are *really* necessary for Office and PDF.
+- [ ] Check if all prerequisites for Crossover are _really_ necessary for Office and PDF.
 - [ ] Decide what to do with chezmoi module.
 - [ ] Add keyboard layout
- 
+
 ## Current issues
 
 Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox.

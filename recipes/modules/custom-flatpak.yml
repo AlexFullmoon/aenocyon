@@ -11,3 +11,8 @@ modules:
           - org.libreoffice.LibreOffice
           - eu.betterbird.Betterbird
           - md.obsidian.Obsidian
+          - io.gitlab.news_flash.NewsFlash
+          - com.github.PintaProject.Pinta
+          - org.telegram.desktop
+          - com.mikrotik.WinBox
+          - com.belmoussaoui.Decoder

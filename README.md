@@ -2,7 +2,7 @@
 
 [![Bluebuild build status](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml/badge.svg)](https://github.com/alexfullmoon/aenocyon/actions/workflows/build.yml)&nbsp; ![Last commit](https://img.shields.io/github/last-commit/AlexFullmoon/aenocyon?style=plastic&label=updated)
 
-Using `bluefin-dx:stable`, customized for personal use and Thinkpad X1Y5 laptop.
+Using `bluefin-dx:stable`, customized for personal use and Thinkpad laptop.
 
 ## Installation
 
@@ -20,52 +20,50 @@ systemctl reboot
 
 ## Current changes from Bluefin DX
 
-- Installed as RPMs
-  - Solaar, along with udev rules
-  - Bitwarden
-  - SourceGit
-  - Firefox
-  - Crossover
-  - Ghostty
-  - Zec
-  - Steam
-  - Seafile
-  - v2rayN
-  - Happ
-- Installed as flatpaks
-  - LibreOffice
-  - Betterbird (instead of Thunderbird)
-  - Obsidian
-  - Discord
-- Several Gnome extensions along with some config
+Installed apps
+
+| RPMs      | Flatpaks    |
+| --------- | ----------- |
+| Solaar    | LibreOffice |
+| Bitwarden | Betterbird  |
+| SourceGit | Obsidian    |
+| Firefox   | Discord     |
+| Crossover | NewsFlash   |
+| Ghostty   | Pinta       |
+| Zed       | Telegram    |
+| Steam     | WinBox      |
+| Seafile   | Decoder     |
+| v2rayN    |             |
+| Happ      |             |
+
+Also:
+- Several Gnome extensions
 - Some Gnome config
 - ~~Personal dotfiles sync via chezmoi~~
 - System config
   - Enabled SMB1 for VM printer
-  - Disabled avahi-daemon
+  - Masked avahi-daemon
   - Disabled random MAC address by default
-  - Added Russian root CA certificates (might require running `sudo update-ca-trust`)
+  - Added Russian root CA certificates (requires running `sudo update-ca-trust` after first install)
   - Added keyboard layout [M-Layout](https://github.com/alexfullmoon/m-layout)
-- Removed
+- Removed apps
   - InputRemapper
   - Gnome Tweaks
   - Tailscale
+  - VSCode
 
 ## TODO
 
 - [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
-  - Or drop Appimages.
+  - Or drop Appimages. I barely use them.
 - [ ] Check if all prerequisites for Crossover are _really_ necessary for Office and PDF.
 - [ ] Decide what to do with chezmoi module.
-- [ ] Add keyboard layout
 
 ## Current issues
 
-Crossover _really_ doesn't like being installed on readonly filesystem, any operation with existing bottles results in hang up. Importing archived bottles work, though. For working with bottles install a copy into distrobox.
+Crossover doesn't really work on readonly filesystem, any operation with existing bottles results in hang up. Running existing bottles works, though. For working with bottles install a copy into distrobox.
 
 Chezmoi gets some variables (un)defined if applied during build. Currently disabled in recipe, apply manually.
-
-SublimeText currently has issues with their RPM packaging unsupported in F43. Install manually into distrobox via `sudo rpm -ivh --nodigest --nofiledigest sublime-text-4200-1.x86_64.rpm`
 
 ## Making your own image
 

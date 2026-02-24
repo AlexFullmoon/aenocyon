@@ -22,21 +22,23 @@ systemctl reboot
 
 Installed apps
 
-| RPMs      | Flatpaks    |
-| --------- | ----------- |
-| Solaar    | LibreOffice |
-| Bitwarden | Betterbird  |
-| SourceGit | Obsidian    |
-| Firefox   | Discord     |
-| Crossover | NewsFlash   |
-| Ghostty   | Pinta       |
-| Zed       | Telegram    |
-| Steam     | WinBox      |
-| Seafile   | Decoder     |
-| v2rayN    |             |
-| Happ      |             |
+| RPMs          | Flatpaks    |
+| ------------- | ----------- |
+| Solaar        | LibreOffice |
+| Bitwarden     | Betterbird  |
+| SourceGit     | Obsidian    |
+| Firefox       | Discord     |
+| Crossover     | NewsFlash   |
+| Ghostty       | Pinta       |
+| Zed           | Telegram    |
+| Steam         | WinBox      |
+| Seafile       | Decoder     |
+| v2rayN        |             |
+| Happ          |             |
+| Chromium-GOST |             |
 
 Also:
+
 - Several Gnome extensions
 - Some Gnome config
 - ~~Personal dotfiles sync via chezmoi~~

@@ -1,0 +1,9 @@
+#%PAM-1.0
+auth       include      system-auth
+auth 	   optional 	pam_exec.so /usr/local/bin/linux-enable-ir-emitter run --config /etc/linux-enable-ir-emitter.toml
+auth	   sufficient   pam_python.so /lib64/security/howdy/pam.py
+account    include      system-auth
+password   include      system-auth
+session    optional     pam_keyinit.so revoke
+session    required     pam_limits.so
+session    include      system-auth

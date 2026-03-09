@@ -11,6 +11,8 @@ modules:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - /tmp/sourcegit.repo
+      copr:
+        - ronnypfannschmidt/howdy-beta
     install:
       packages:
         - terra-release
@@ -31,6 +33,9 @@ modules:
         - firefox
         - steam
         - dbus-glib # Zotero prerequisite
+        - howdy     # IR camera login.
+        - howdy-gtk # TODO: Add IR projector enabler and config.
+        - howdy-authselect
     remove:
       packages:
         - input-remapper

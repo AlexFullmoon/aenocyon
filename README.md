@@ -36,6 +36,7 @@ Installed apps
 | v2rayN        |             |
 | Happ          |             |
 | Chromium-GOST |             |
+| howdy         |             |
 
 Also:
 
@@ -48,6 +49,7 @@ Also:
   - Disabled random MAC address by default
   - Added Russian root CA certificates (requires running `sudo update-ca-trust` after first install)
   - Added keyboard layout [M-Layout](https://github.com/alexfullmoon/m-layout)
+  - Added howdy with IR enabler plugin
 - Removed apps
   - InputRemapper
   - Gnome Tweaks

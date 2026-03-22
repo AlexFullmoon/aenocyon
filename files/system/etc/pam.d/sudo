@@ -1,6 +1,5 @@
 #%PAM-1.0
 auth       include      system-auth
-auth 	   optional 	pam_exec.so /usr/local/bin/linux-enable-ir-emitter run --config /etc/linux-enable-ir-emitter.toml
 auth	   sufficient   pam_howdy.so
 account    include      system-auth
 password   include      system-auth

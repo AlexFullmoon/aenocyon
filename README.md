@@ -33,7 +33,6 @@ Installed apps
 | Zed           | Telegram    |
 | Steam         | WinBox      |
 | Seafile       | Decoder     |
-| v2rayN        |             |
 | Happ          |             |
 | Chromium-GOST |             |
 | howdy         |             |
@@ -58,8 +57,6 @@ Also:
 
 ## TODO
 
-- [ ] Add libfuse for continuing support of AppImage (whenever they drop it from Bluefin)
-  - Or drop Appimages. I barely use them.
 - [ ] Check if all prerequisites for Crossover are _really_ necessary for Office and PDF.
 - [ ] Decide what to do with chezmoi module.
 

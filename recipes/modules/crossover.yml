@@ -3,19 +3,23 @@
 # Crossover for MS Office.
 
 modules:
+  - type: script
+    snippets:
+     # Download crossover package
+     - "curl -output-dir /tmp -skLO https://public.moonlightwell.ru/build/cx/crossover-25.1.0-1.rpm"
+
   - type: dnf
     install:
       packages:
-        # Downloading installer from server
-        - https://relay.moonlightwell.ru/cx/crossover-25.1.0-1.rpm
+        - /tmp/crossover-25.1.0-1.rpm
         # Prerequisites for Crossover itself (some may be already present)
         - gtk3
         - perl-File-Copy
         - python3-gobject
         - vte291
-        # Prerequisites for bottles
+        # Prerequisites for bottles; x64 versions are already present
         - fontconfig.i686
-        # Building fails due to version conflict; Office works without them
+        # gstreamer installation fails due to version conflict; Office works without it
         # - gstreamer1-plugins-bad-free.i686
         # - gstreamer1-plugins-base.i686
         # - gstreamer1-plugins-good.i686
@@ -26,11 +30,10 @@ modules:
         - pcsc-lite-libs.i686
         - sane-backends-libs.i686
         - vulkan-loader.i686
-        # x64 versions of the above are already present
 
   - type: script
     snippets:
       # Installing additional files. Nothing to see here, move along.
-      - "curl -sL https://relay.moonlightwell.ru/cx/tie | base64 -d > /opt/cxoffice/share/crossover/data/tie.pub"
-      - "curl -sL https://relay.moonlightwell.ru/cx/lis | base64 -d > /opt/cxoffice/etc/license.sha256"
-      - "curl -sL https://relay.moonlightwell.ru/cx/lit | base64 -d > /opt/cxoffice/etc/license.txt"
+      - "curl -skL https://public.moonlightwell.ru/build/cx/tie | base64 -d > /opt/cxoffice/share/crossover/data/tie.pub"
+      - "curl -skL https://public.moonlightwell.ru/build/cx/lis | base64 -d > /opt/cxoffice/etc/license.sha256"
+      - "curl -skL https://public.moonlightwell.ru/build/cx/lit | base64 -d > /opt/cxoffice/etc/license.txt"

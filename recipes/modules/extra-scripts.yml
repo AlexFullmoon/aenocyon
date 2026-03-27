@@ -7,5 +7,5 @@ modules:
      # Download linux-enable-ir-emitter
      # (TODO) move file to public share
      - "curl -output-dir /tmp -O https://github.com/EmixamPP/linux-enable-ir-emitter/releases/download/7.0.0-beta/linux-enable-ir-emitter-7.0.0-beta2-release-x86-64.tar.gz"
-     - "tar -C /var/usrlocal/bin/ --no-same-owner -m -vxzf /tmp/linux-enable-ir-emitter*.tar.gz"
+     - "tar -C /var/usrlocal/bin/ --no-same-owner -m -vxzf /tmp/linux-enable-ir-emitter-7.0.0-beta2-release-x86-64.tar.gz"
      - "rm /tmp/linux-enable-ir-emitter*.tar.gz"

@@ -19,6 +19,7 @@ xkb-options=['grp:caps_toggle']
 
 [org.gnome.desktop.interface]
 accent-color='slate'
+gtk-enable-primary-paste=true
 
 [org.gnome.shell.weather]
 automatic-location=true

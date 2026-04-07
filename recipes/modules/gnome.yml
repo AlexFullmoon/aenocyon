@@ -6,7 +6,6 @@ modules:
     install:
       - 7    # Removable Drive Menu
       - 986  # Thinkpad thermals
-      - 1460 # Vitals
       - 2236 # Night theme switcher
       - 3843 # Just Perfection
       - 5660 # Weather or not

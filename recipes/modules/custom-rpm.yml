@@ -29,13 +29,13 @@ modules:
         - https://update.cryptopro.ru/get/chromium-gost/linux/amd64/rpm
         - firefox
         - steam
-        - dbus-glib # Zotero prerequisite
+        - dbus-glib
     remove:
       packages:
         - input-remapper
         - gnome-tweaks
         - tailscale
-        - code # switching to Zed
+        - code
 
   - type: script
     snippets:

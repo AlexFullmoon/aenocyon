@@ -1,9 +1,3 @@
-[org.gnome.shell.extensions.thinkpad-battery-threshold]
-color-mode=false
-end-bat0=85
-indicator-mode='NEVER'
-start-bat0=80
-
 [org.gnome.shell.extensions.search-light]
 animation-speed=100.0
 background-color=(0.0, 0.0, 0.0, 0.56999999284744263)

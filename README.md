@@ -56,7 +56,6 @@ Also:
 ## TODO
 
 - [ ] Check if all prerequisites for Crossover are _really_ necessary for Office and PDF.
-- [ ] Set up download location for build files (either http or LE SSL)
 - [ ] Decide what to do with chezmoi module.
 
 ## Current issues and notes
@@ -64,8 +63,6 @@ Also:
 Crossover doesn't really work on readonly filesystem, any operation with existing bottles results in hang up. Running existing bottles works, though. For working with bottles install a copy into distrobox.
 
 Chezmoi gets some variables (un)defined if applied during build. Currently disabled in recipe, apply manually.
-
-Howdy: run `sudo howdy-authselect enable` after first install.
 
 ## Making your own image
 

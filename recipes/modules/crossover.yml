@@ -19,12 +19,12 @@ modules:
         # - gstreamer1-plugins-base.i686
         # - gstreamer1-plugins-good.i686
         # - gstreamer1.i686
-        - libXcomposite.i686
-        - libXinerama.i686
-        - nss-mdns.i686
-        - pcsc-lite-libs.i686
-        - sane-backends-libs.i686
-        - vulkan-loader.i686
+        # - libXcomposite.i686
+        # - libXinerama.i686
+        # - nss-mdns.i686
+        # - pcsc-lite-libs.i686
+        # - sane-backends-libs.i686
+        # - vulkan-loader.i686
 
   - type: script
     snippets:

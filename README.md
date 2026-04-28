@@ -55,7 +55,7 @@ Also:
 
 ## TODO
 
-- [ ] Check if all prerequisites for Crossover are _really_ necessary for Office and PDF.
+- [ ] Test Crossover with x64 Office to do away with x86 dependencies.
 - [ ] Decide what to do with chezmoi module.
 
 ## Current issues and notes

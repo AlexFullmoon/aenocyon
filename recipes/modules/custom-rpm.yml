@@ -25,7 +25,6 @@ modules:
         - sourcegit
         - ghostty
         - zed
-        - zed-rename-zeditor
         - sublime-text
         - seafile-client
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm

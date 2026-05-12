@@ -5,7 +5,7 @@ modules:
   - type: gnome-extensions
     install:
       - 7    # Removable Drive Menu
-      - 986  # Thinkpad thermals
+      # - 986  # Thinkpad thermals
       - 2236 # Night theme switcher
       - 3843 # Just Perfection
       - 5660 # Weather or not

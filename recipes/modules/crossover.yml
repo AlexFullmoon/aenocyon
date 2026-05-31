@@ -6,7 +6,7 @@ modules:
   - type: dnf
     install:
       packages:
-        - https://public.moonlightwell.ru/build/cx/crossover-25.1.0-1.rpm
+        - https://public.moonlightwell.ru/build/cx/crossover-26.1.0-1.rpm
         # Prerequisites for Crossover itself (some may be already present)
         - gtk3
         - perl-File-Copy
@@ -16,12 +16,12 @@ modules:
         - fontconfig.i686
         - nss-mdns.i686
         - sane-backends-libs.i686
-        # Other prerequisites are not required for running Office
+        - libXcomposite.i686 # required for Office 2016
+        # Other prerequisites are apparently not required for running Office
         # - gstreamer1-plugins-bad-free.i686
         # - gstreamer1-plugins-base.i686
         # - gstreamer1-plugins-good.i686
         # - gstreamer1.i686
-        # - libXcomposite.i686
         # - libXinerama.i686
         # - pcsc-lite-libs.i686
         # - vulkan-loader.i686

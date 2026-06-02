@@ -31,7 +31,7 @@ modules:
         - https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.rpm
         - https://update.cryptopro.ru/get/chromium-gost/linux/amd64/rpm
         - firefox
-        - steam
+        # - steam
         - dbus-glib
     remove:
       packages:

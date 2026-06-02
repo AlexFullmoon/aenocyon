@@ -13,6 +13,6 @@ modules:
   - from-file: modules/overrides.yml
   - from-file: modules/custom-flatpak.yml
   - from-file: modules/custom-rpm.yml
-  - from-file: modules/crossover.yml
+  # - from-file: modules/crossover.yml
   - from-file: modules/personalize.yml
   - type: signing

@@ -28,13 +28,12 @@ Installed apps
 | Bitwarden     | Betterbird  |
 | SourceGit     | Obsidian    |
 | Firefox       | Discord     |
-| Crossover     | NewsFlash   |
+| ~~Crossover~~ | NewsFlash   |
 | Ghostty       | Pinta       |
 | Zed           | Telegram    |
-| Steam         | WinBox      |
+| Chromium-GOST | WinBox      |
 | Seafile       | Decoder     |
-| Happ          |             |
-| Chromium-GOST |             |
+| Happ          | Steam       |
 
 Also:
 
@@ -57,10 +56,11 @@ Also:
 
 - [ ] Test Crossover with x64 Office to do away with x86 dependencies.
 - [ ] Decide what to do with chezmoi module.
+- [ ] Steam removed due to dependency conflict. Consider checking what's wrong with Terra repo.Currently installing via Flatpak.
 
 ## Current issues and notes
 
-Crossover doesn't really work on readonly filesystem, any operation with existing bottles results in hang up. Running existing bottles works, though. For working with bottles install a copy into distrobox.
+Crossover doesn't really work on readonly filesystem, any operation with existing bottles results in hang up. Latest version × Fedora 44 finally broke something, so it won't launch anything either. Install through distrobox.
 
 Chezmoi gets some variables (un)defined if applied during build. Currently disabled in recipe, apply manually.
 

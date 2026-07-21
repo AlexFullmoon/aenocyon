@@ -44,5 +44,4 @@ jobs:
           maximize_build_space: true
 
           # Save some download space and somewhat improve download efficiency
-          rechunk: true
           use_cache: true
